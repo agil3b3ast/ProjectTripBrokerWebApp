@@ -23,11 +23,13 @@ public class OffertaTrasportoDAO extends OffertaDAO {
         String query = "from OffertaTrasporto";
         @SuppressWarnings("unchecked")
         List<OffertaTrasporto> offerte = s.createQuery(query).list();
-        if(offerte.size()>0)
+        if(offerte.size()>0) {
+            s.close();
             return offerte;
-        else
+        }else {
+            s.close();
             return null;
-
+        }
     }
 
     @Override
@@ -36,11 +38,13 @@ public class OffertaTrasportoDAO extends OffertaDAO {
         String query = "from OffertaTrasporto offertaTrasporto where offertaTrasporto.trasID = '"+id+"'";
         @SuppressWarnings("unchecked")
         List<OffertaTrasporto> offerte = s.createQuery(query).list();
-        if(offerte.size()>0)
+        if(offerte.size()>0) {
+            s.close();
             return offerte.get(0);
-        else
+        }else {
+            s.close();
             return null;
-
+        }
     }
 
     @Override
@@ -49,11 +53,13 @@ public class OffertaTrasportoDAO extends OffertaDAO {
         String query = "from OffertaTrasporto offertaTrasporto where offertaTrasporto.tipologia = '"+type+"'";
         @SuppressWarnings("unchecked")
         List<OffertaTrasporto> offerte = s.createQuery(query).list();
-        if(offerte.size()>0)
-            return offerte;
-        else
+        if(offerte.size()>0){
+            s.close();
+            return offerte;}
+        else {
+            s.close();
             return null;
-
+        }
     }
 
 
@@ -77,6 +83,9 @@ public class OffertaTrasportoDAO extends OffertaDAO {
         }catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             e.printStackTrace();
+        }
+        finally {
+            s.close();
         }
 
     }
@@ -111,7 +120,8 @@ public class OffertaTrasportoDAO extends OffertaDAO {
             throw e;
         }
         finally {
-            DBResourcesManager.shutdown();
+            s.close();
+            //DBResourcesManager.shutdown();
         }
 
     }
@@ -233,10 +243,12 @@ public class OffertaTrasportoDAO extends OffertaDAO {
 
         String query = initquery + joinedstring;
         List<OffertaTrasporto> offerte = s.createQuery(query).list();
-        if(offerte.size()>0)
-            return offerte;
-        else
+        if(offerte.size()>0){
+            s.close();
+            return offerte;}
+        else {
+            s.close();
             return null;
-
+        }
     }
 }

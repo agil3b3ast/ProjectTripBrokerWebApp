@@ -10,6 +10,8 @@
 <jsp:useBean id="carrelloBean" scope="session"
              type="newpackage.CarrelloBean" />
 
+<jsp:setProperty name="carrelloBean" property="*"/>
+
 <!-- Si dichiara la variabile utenteBean e istanzia un oggetto newpackage.UtenteBean -->
 <jsp:useBean id="utenteBean" scope="session"
              class="newpackage.UtenteBean" />
@@ -40,13 +42,28 @@
     </div>
 
     <%}}}
-    if(request.getParameter("packetitem") != null){
-        System.out.println(request.getParameter("packetitem").equals("ciao"));
+%>
+<%
+    if(request.getParameter("offertrasportoitem")!=null){
+    if(request.getParameter("offertrasportoitem").equals("")){
+    System.out.println("RequestGetParameter");}
+    if(!request.getParameter("offertrasportoitem").equals("")){
+        System.out.println("RequesteGetPArameterNotNull");}
     }
-    if(request.getParameter("enter") != null){
-        System.out.println(request.getParameter("enter").equals("enter"));
-        System.out.println(request.getParameter("enter"));
-    }
+    if(request.getParameter("confirmRemovePack") != null || request.getParameter("confirmRemoveEve") != null || request.getParameter("confirmRemoveTras") != null || request.getParameter("confirmRemovePer") != null){
+        System.out.println("Rimuovo item");
+    if(!(carrelloBean.getPacketitem().equals("")) || !(carrelloBean.getOffereventoitem().equals("")) || !(carrelloBean.getOfferpernottoitem().equals("")) || !(carrelloBean.getOffertrasportoitem().equals(""))){
+        System.out.println("Item da rimuovere, qualcosa non è null");
+    if(!carrelloBean.removeItem()){%>
+    <div class="row">
+        <div class="card blue-grey">
+            <div class="card-content white-text">
+                <span class="card-title">Non è stato possibile rimuovere l'elemento dal carrello</span>
+            </div>
+        </div>
+    </div>
+<%
+    }}}
 %>
 
 
@@ -84,6 +101,10 @@
                         <li>Citta <%=ofe.getOfcity()%></li>
                     </ul>
                 </div>
+                <form action="Pagamento.jsp" name="myform8" method="post">
+                    <input hidden value="<%=ofe.getOfid()%>" type="text" name="offereventoitem" id="offereventoitem">
+                    <button class="btn-flat waves-effect waves-light" type="submit" id="confirmRemoveEve" name="confirmRemoveEve">Rimuovi dal carrello</button>
+                </form>
             </div>
         <%}
         %>
@@ -105,6 +126,10 @@
                     <li>Numero stelle <%=ofp.getStars()%></li>
                 </ul>
             </div>
+            <form action="Pagamento.jsp" name="myform7" method="post">
+                <input hidden value="<%=ofp.getOfid()%>" type="text" name="offerpernottoitem" id="offerpernottoitem">
+                <button class="btn-flat waves-effect waves-light" type="submit" id="confirmRemovePer" name ="confirmRemovePer" >Rimuovi dal carrello</button>
+            </form>
         </div>
         <%}%>
 
@@ -125,6 +150,10 @@
                     <li>Durata <%=oft.getDuration()%></li>
                 </ul>
             </div>
+            <form action="Pagamento.jsp" name="myform6" method="post">
+                <input hidden value="<%=oft.getOfid()%>" type="text" name="offertrasportoitem" id="offertrasportoitem">
+                <button class="btn-flat waves-effect waves-light" type="submit" id="confirmRemoveTras" name="confirmRemoveTras">Rimuovi dal carrello</button>
+            </form>
         </div>
         <%}
         %>
@@ -142,6 +171,10 @@
                     <li>Prezzo <%=p.getPprice()%></li>
                 </ul>
             </div>
+            <form action="Pagamento.jsp" name="myform5" method="post">
+                <input hidden value="<%=p.getId()%>" type="text" name="packetitem" id="packetitem">
+                <button class="btn-flat waves-effect waves-light" type="submit" id="confirmRemovePack" name ="confirmRemovePack">Rimuovi dal carrello</button>
+            </form>
         </div>
         <%}
         }

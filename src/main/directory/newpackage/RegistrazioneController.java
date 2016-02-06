@@ -49,7 +49,7 @@ public class RegistrazioneController {
             webclient.setHasCart(carrello);
             webclient.setDataIscrizione(new Date((new java.util.Date()).getTime()));
             DAOFactory.getWebClientDAO().store(webclient);
-            DBResourcesManager.shutdown();
+            //DBResourcesManager.shutdown();
             return webclient;
         }
         catch (ParseException e){

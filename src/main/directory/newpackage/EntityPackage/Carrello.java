@@ -1,13 +1,14 @@
 package newpackage.EntityPackage;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by Alessandro on 29/01/2016.
- */
 @Entity
-public class Carrello {
+public class Carrello implements Serializable{
     private int id;
 
     @GeneratedValue
@@ -22,6 +23,7 @@ public class Carrello {
 
     private List<Pacchetto> hasPacket;
 
+    @LazyCollection(LazyCollectionOption.FALSE)
     @ManyToMany//(fetch = FetchType.EAGER)
     public List<Pacchetto> getHasPacket() {
         return hasPacket;
@@ -33,6 +35,7 @@ public class Carrello {
 
     private List<OffertaEvento> hasEvent;
 
+    @LazyCollection(LazyCollectionOption.FALSE)
     @ManyToMany//(fetch = FetchType.EAGER)
     public List<OffertaEvento> getHasEvent() {
         return hasEvent;
@@ -44,6 +47,7 @@ public class Carrello {
 
     private List<OffertaTrasporto> hasTras;
 
+    @LazyCollection(LazyCollectionOption.FALSE)
     @ManyToMany//(fetch = FetchType.EAGER)
     public List<OffertaTrasporto> getHasTras() {
         return hasTras;
@@ -55,6 +59,7 @@ public class Carrello {
 
     private List<OffertaPernotto> hasPer;
 
+    @LazyCollection(LazyCollectionOption.FALSE)
     @ManyToMany//(fetch = FetchType.EAGER)
     public List<OffertaPernotto> getHasPer() {
         return hasPer;
@@ -118,22 +123,38 @@ public class Carrello {
     public boolean removeItemFromCart(Object object){
         if(object instanceof Pacchetto){
             Pacchetto p = (Pacchetto) object;
-            return this.hasPacket.remove(p);
+
+            for(Pacchetto pacchetto : this.hasPacket){
+                if(pacchetto.getId().equals(p.getId())){
+                    return this.hasPacket.remove(pacchetto);
+                }
+            }
+
         }
         else if(object instanceof OffertaEvento){
             OffertaEvento oe = (OffertaEvento) object;
-            return this.hasEvent.remove(oe);
-
+            for(OffertaEvento offertaEvento : this.hasEvent){
+                if(offertaEvento.getEveID().equals(oe.getEveID())){
+                    return this.hasEvent.remove(offertaEvento);
+                }
+            }
         }
         else if(object instanceof OffertaPernotto){
             OffertaPernotto op = (OffertaPernotto) object;
-            return this.hasPer.remove(op);
+            for(OffertaPernotto offertaPernotto : this.hasPer){
+                if(offertaPernotto.getPerID().equals(op.getPerID())){
+                    return this.hasPer.remove(offertaPernotto);
+                }
+            }
 
         }
         else if(object instanceof OffertaTrasporto){
             OffertaTrasporto ot = (OffertaTrasporto) object;
-            return this.hasTras.remove(ot);
-
+            for(OffertaTrasporto offertaTrasporto : this.hasTras){
+                if(offertaTrasporto.getTrasID().equals(ot.getTrasID())){
+                    return this.hasTras.remove(offertaTrasporto);
+                }
+            }
         }
         return false;
     }

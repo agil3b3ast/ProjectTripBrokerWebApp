@@ -4,13 +4,14 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
  * Created by Alessandro on 29/01/2016.
  */
 @Entity
-public class WebClient{
+public class WebClient implements Serializable{
     @GeneratedValue
     @Id
     private int id;

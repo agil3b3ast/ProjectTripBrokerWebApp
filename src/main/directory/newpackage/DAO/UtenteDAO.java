@@ -44,9 +44,11 @@ public class UtenteDAO {
         }
         else if(users.size() == 1){
             System.out.println("Query eseguita correttamente");
+            s.close();
             return users;
         }
         else{
+            s.close();
             return null;
         }
     }

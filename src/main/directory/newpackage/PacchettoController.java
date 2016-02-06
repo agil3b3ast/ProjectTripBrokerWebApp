@@ -33,7 +33,7 @@ public class PacchettoController {
         if(typesearch == null) {
             ls = DAOFactory.getPacchettoDAO().getList();
         }
-        DBResourcesManager.shutdown();
+        //DBResourcesManager.shutdown();
         return ls;
     }
 
@@ -42,7 +42,7 @@ public class PacchettoController {
 
         Pacchetto p = DAOFactory.getPacchettoDAO().findByID(idtofind);
 
-        DBResourcesManager.shutdown();
+        //DBResourcesManager.shutdown();
         return p;
     }
 

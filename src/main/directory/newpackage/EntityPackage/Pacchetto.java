@@ -6,6 +6,7 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
@@ -13,7 +14,7 @@ import java.util.Set;
  * Created by Alessandro on 08/01/2016.
  */
 @Entity
-public class Pacchetto {
+public class Pacchetto implements Serializable{
     private Integer id;
     private OffertaPernotto offertaPernotto;
     private OffertaTrasporto offertaTrasporto;
@@ -50,7 +51,8 @@ public class Pacchetto {
         this.offertaTrasporto = OffertaTrasportoEntity;
     }
     //FetchType.EAGER
-    @ManyToMany(fetch = FetchType.EAGER)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @ManyToMany//(fetch = FetchType.EAGER)
     public List<OffertaEvento> getOffertaEvento() {
         return offertaEvento;
     }

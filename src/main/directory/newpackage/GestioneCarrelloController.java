@@ -16,6 +16,7 @@ public class GestioneCarrelloController {
     }
 
     public Object addItem(String iditem,String typeitem, String idcart){
+        DBResourcesManager.initHibernate();
         if(typeitem.equals("Pacchetto")){
             Pacchetto p = DAOFactory.getPacchettoDAO().findByID(iditem);
 
@@ -40,7 +41,7 @@ public class GestioneCarrelloController {
             }
         }
         else if(typeitem.equals("OffertaPernotto")){
-            Object o = DAOFactory.getDAOFactory(TipoOfferta.OffertaEvento).getOffertaDAO().findOff(iditem);
+            Object o = DAOFactory.getDAOFactory(TipoOfferta.OffertaPernotto).getOffertaDAO().findOff(iditem);
 
             if(o != null){
                 OffertaPernotto of = (OffertaPernotto) o;
@@ -52,7 +53,7 @@ public class GestioneCarrelloController {
             }
         }
         else if(typeitem.equals("OffertaTrasporto")){
-            Object o = DAOFactory.getDAOFactory(TipoOfferta.OffertaEvento).getOffertaDAO().findOff(iditem);
+            Object o = DAOFactory.getDAOFactory(TipoOfferta.OffertaTrasporto).getOffertaDAO().findOff(iditem);
 
             if(o != null){
                 OffertaTrasporto of = (OffertaTrasporto) o;
@@ -66,6 +67,7 @@ public class GestioneCarrelloController {
         return null;
     }
     public Object removeItem(String iditem,String typeitem, String idcart){
+        DBResourcesManager.initHibernate();
         if(typeitem.equals("Pacchetto")){
             Pacchetto p = DAOFactory.getPacchettoDAO().findByID(iditem);
 
@@ -90,7 +92,7 @@ public class GestioneCarrelloController {
             }
         }
         else if(typeitem.equals("OffertaPernotto")){
-            Object o = DAOFactory.getDAOFactory(TipoOfferta.OffertaEvento).getOffertaDAO().findOff(iditem);
+            Object o = DAOFactory.getDAOFactory(TipoOfferta.OffertaPernotto).getOffertaDAO().findOff(iditem);
 
             if(o != null){
                 OffertaPernotto of = (OffertaPernotto) o;
@@ -102,7 +104,7 @@ public class GestioneCarrelloController {
             }
         }
         else if(typeitem.equals("OffertaTrasporto")){
-            Object o = DAOFactory.getDAOFactory(TipoOfferta.OffertaEvento).getOffertaDAO().findOff(iditem);
+            Object o = DAOFactory.getDAOFactory(TipoOfferta.OffertaTrasporto).getOffertaDAO().findOff(iditem);
 
             if(o != null){
                 OffertaTrasporto of = (OffertaTrasporto) o;

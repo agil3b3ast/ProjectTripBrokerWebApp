@@ -42,6 +42,7 @@ public class CarrelloDAO {
                 System.out.println("Lista con più di un elemento o vuota");
                 return null;
             }
+            s.close();
             return p.get(0);
         }
         catch (HibernateException e){
@@ -69,6 +70,7 @@ public class CarrelloDAO {
 
             s.update(c);
             tx.commit();
+            s.close();
             return c;
 
         }
@@ -92,11 +94,12 @@ public class CarrelloDAO {
             }
             Carrello c = p.get(0);
 
-            if(!c.removeItemFromCart(p))
+            if(!c.removeItemFromCart(item))
                 return null;
 
             s.update(c);
             tx.commit();
+            s.close();
             return c;
 
         }

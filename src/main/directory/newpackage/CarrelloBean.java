@@ -93,6 +93,48 @@ public class CarrelloBean implements Serializable{
         return this.itemList.isEmpty();
     }
 
+    public boolean removeItemFromCart(Object o){
+        Object res = fromObjtoBean(o);
+        if(res instanceof PacchettoBean){
+
+            for(Object obj:this.itemList){
+                if(obj instanceof PacchettoBean){
+                    if(((PacchettoBean) obj).getId() == ((PacchettoBean) res).getId())
+                        return this.itemList.remove(obj);
+                }
+            }
+        }
+        if(res instanceof OffertaEventoBean){
+            for(Object obj:this.itemList){
+                if(obj instanceof OffertaEventoBean){
+                    if(((OffertaEventoBean) obj).getOfid() == ((OffertaEventoBean) res).getOfid())
+                        return this.itemList.remove(obj);
+                }
+            }
+        }
+        if(res instanceof OffertaPernottoBean){
+
+            for(Object obj:this.itemList){
+                if(obj instanceof OffertaPernottoBean){
+                    if(((OffertaPernottoBean) obj).getOfid() == ((OffertaPernottoBean) res).getOfid())
+                        return this.itemList.remove(obj);
+                }
+            }
+        }
+        if(res instanceof OffertaTrasportoBean){
+
+            for(Object obj:this.itemList){
+                if(obj instanceof OffertaTrasportoBean){
+                    if(((OffertaTrasportoBean) obj).getOfid() == ((OffertaTrasportoBean) res).getOfid())
+                        return this.itemList.remove(obj);
+                }
+            }
+        }
+
+        return false;
+    }
+
+
     public Object fromObjtoBean(Object object){
 
         if(object instanceof OffertaEvento){
@@ -176,9 +218,8 @@ public class CarrelloBean implements Serializable{
                         }
                     }
                 }*/
-                this.itemList.remove(fromObjtoBean(p));
                 this.packetitem = "";
-                return true;
+                return removeItemFromCart(p);
             }
             return false;
 
@@ -189,9 +230,9 @@ public class CarrelloBean implements Serializable{
             if (o != null) {
                 OffertaEvento oe = (OffertaEvento) o;
 
-                this.itemList.remove(fromObjtoBean(oe));
                 this.offereventoitem = "";
-                return true;
+                return removeItemFromCart(oe);
+
             }
             return false;
 
@@ -203,9 +244,9 @@ public class CarrelloBean implements Serializable{
             if (o != null) {
                 OffertaPernotto op = (OffertaPernotto) o;
 
-                this.itemList.remove(fromObjtoBean(op));
                 this.offerpernottoitem = "";
-                return true;
+                return removeItemFromCart(op);
+
             }
             return false;
 
@@ -217,9 +258,8 @@ public class CarrelloBean implements Serializable{
             if (o != null) {
                 OffertaTrasporto ot = (OffertaTrasporto) o;
 
-                this.itemList.remove(fromObjtoBean(ot));
                 this.offertrasportoitem = "";
-                return true;
+                return removeItemFromCart(ot);
             }
             return false;
         }

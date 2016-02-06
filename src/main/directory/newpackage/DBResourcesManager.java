@@ -20,6 +20,9 @@ public class DBResourcesManager {
 
     public static void initHibernate() {
         try{
+            if(sessionFactory != null){
+                return;
+            }
             Configuration configuration = new Configuration();
             configuration.configure();
             serviceRegistry = new ServiceRegistryBuilder().applySettings(

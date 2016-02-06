@@ -39,7 +39,7 @@ public class OffertaController {
         else{
             ls = DAOFactory.getDAOFactory(tipoOfferta).getOffertaDAO().findtype(typesearch);
         }
-        DBResourcesManager.shutdown();
+        //DBResourcesManager.shutdown();
         return ls;
     }
 
@@ -52,7 +52,7 @@ public class OffertaController {
         Object ls = null;
 
         ls = DAOFactory.getDAOFactory(tipoOfferta).getOffertaDAO().findOff(idtofind);
-        DBResourcesManager.shutdown();
+        //DBResourcesManager.shutdown();
         return ls;
     }
 
@@ -65,7 +65,7 @@ public class OffertaController {
         Object ls = null;
 
         ls = DAOFactory.getDAOFactory(tipoOfferta).getOffertaDAO().customSearch(list);
-        DBResourcesManager.shutdown();
+        //DBResourcesManager.shutdown();
         return ls;
     }
 

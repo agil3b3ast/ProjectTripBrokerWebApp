@@ -2,6 +2,7 @@ package newpackage.EntityPackage;
 
 import javax.persistence.Basic;
 import javax.persistence.MappedSuperclass;
+import java.io.Serializable;
 
 /**
  * Created by Alessandro on 08/01/2016.
@@ -11,7 +12,7 @@ import javax.persistence.MappedSuperclass;
 //@Entity
 //@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @MappedSuperclass
-public class Offerta {
+public class Offerta implements Serializable{
     private String ofID;
     private String nome;
     private int prezzo;

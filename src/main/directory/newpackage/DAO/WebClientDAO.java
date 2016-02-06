@@ -43,13 +43,16 @@ public class WebClientDAO {
         List<WebClient> webClients = s.createQuery(query).list();
         if (webClients.size() > 1){
             System.out.println("Query ha ritornato più di un oggetto");
+            s.close();
             return null;
         }
         else if(webClients.size() == 1){
             System.out.println("Query eseguita correttamente");
+            s.close();
             return webClients;
         }
         else{
+            s.close();
             return null;
         }
     }

@@ -25,11 +25,13 @@ public class OffertaPernottoDAO extends OffertaDAO {
         String query = "from OffertaPernotto";
         @SuppressWarnings("unchecked")
         List<OffertaPernotto> offerte = s.createQuery(query).list();
-        if(offerte.size()>0)
-            return offerte;
-        else
+        if(offerte.size()>0){
+            s.close();
+            return offerte;}
+        else {
+            s.close();
             return null;
-
+        }
     }
 
     @Override
@@ -38,11 +40,14 @@ public class OffertaPernottoDAO extends OffertaDAO {
         String query = "from OffertaPernotto offertaPernotto where offertaPernotto.tipologia = '"+type+"'";
         @SuppressWarnings("unchecked")
         List<OffertaPernotto> offerte = s.createQuery(query).list();
-        if(offerte.size()>0)
+        if(offerte.size()>0) {
+            s.close();
             return offerte;
-        else
+        }
+        else {
+            s.close();
             return null;
-
+        }
     }
 
     @Override
@@ -51,11 +56,13 @@ public class OffertaPernottoDAO extends OffertaDAO {
         String query = "from OffertaPernotto offertaPernotto where offertaPernotto.perID = '"+id+"'";
         @SuppressWarnings("unchecked")
         List<OffertaPernotto> offerte = s.createQuery(query).list();
-        if(offerte.size()>0)
-            return offerte.get(0);
-        else
+        if(offerte.size()>0){
+            s.close();
+            return offerte.get(0);}
+        else {
+            s.close();
             return null;
-
+        }
     }
 
     @Override
@@ -78,7 +85,9 @@ public class OffertaPernottoDAO extends OffertaDAO {
             if (tx!=null) tx.rollback();
             e.printStackTrace();
         }
-
+        finally {
+            s.close();
+        }
     }
 
     @Override
@@ -110,7 +119,8 @@ public class OffertaPernottoDAO extends OffertaDAO {
         }
 
         finally {
-            DBResourcesManager.shutdown();
+            s.close();
+            //DBResourcesManager.shutdown();
         }
     }
 
@@ -229,10 +239,12 @@ public class OffertaPernottoDAO extends OffertaDAO {
 
         String query = initquery + joinedstring;
         List<OffertaEvento> offerte = s.createQuery(query).list();
-        if(offerte.size()>0)
+        if(offerte.size()>0) {
+            s.close();
             return offerte;
-        else
+        }else {
+            s.close();
             return null;
-
+        }
     }
 }

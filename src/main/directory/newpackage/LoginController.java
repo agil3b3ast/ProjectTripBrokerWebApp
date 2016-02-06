@@ -29,7 +29,7 @@ public class LoginController {
         //newpackage.Utente u = newpackage.UtendeDao.findByNameAndPassword(username, password);
         DBResourcesManager.initHibernate();
         List<WebClient> webClient = DAOFactory.getWebClientDAO().findSelectedUser(username,password);
-        DBResourcesManager.shutdown();
+        //DBResourcesManager.shutdown();
         if(webClient != null){
             if(webClient.size()!=1){
                 return null;

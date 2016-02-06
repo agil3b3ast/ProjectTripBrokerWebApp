@@ -6,6 +6,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.sql.Connection;
 import java.util.List;
 
 /**
@@ -35,6 +36,7 @@ public class PacchettoDAO {
 
     public  List<Pacchetto> getList() {
         Session s = DBResourcesManager.getSession();
+
         String query = "from Pacchetto";
         @SuppressWarnings("unchecked")
         List<Pacchetto> pacchetto = s.createQuery(query).list();
@@ -48,11 +50,13 @@ public class PacchettoDAO {
             else if(pacchetto.get(0).getOffertaEvento() == null){
                 System.out.println("Offerta evento non esistente");
             }
+            s.close();
             return pacchetto;
         }
-        else
+        else {
+            s.close();
             return null;
-
+        }
     }
 
     public Pacchetto findByID(String idtofind){
@@ -61,8 +65,10 @@ public class PacchettoDAO {
         List<Pacchetto> p = s.createQuery(query).list();
         if(p.size() > 1 || p.isEmpty()){
             System.out.println("Lista con più di un elemento o vuota");
+            s.close();
             return null;
         }
+        s.close();
         return p.get(0);
     }
 
@@ -71,10 +77,14 @@ public class PacchettoDAO {
         String query = "from Pacchetto pacchetto where pacchetto.stato=false";
         @SuppressWarnings("unchecked")
         List<Pacchetto> packs = s.createQuery(query).list();
-        if (packs.size() > 0)
+        if (packs.size() > 0){
+            s.close();
             return packs;
-        else
+        }
+        else {
+            s.close();
             return null;
+        }
     }
 
 
@@ -96,6 +106,9 @@ public class PacchettoDAO {
         }catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             e.printStackTrace();
+        }
+        finally {
+            s.close();
         }
 
     }
@@ -126,7 +139,8 @@ public class PacchettoDAO {
             throw e;
         }
         finally {
-            DBResourcesManager.shutdown();
+            s.close();
+            //DBResourcesManager.shutdown();
         }
     }
 

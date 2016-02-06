@@ -27,15 +27,13 @@
     if (!pacchettoBean.selectAll()) {
         System.out.println("not null");
     }
-    if(request.getParameter("offerpernottoitem") != null)
-        System.out.println(request.getParameter("offerpernottoitem"));
-
+    if(utenteBean.isLogged()){
     if(!(carrelloBean.getPacketitem().equals("")) || !(carrelloBean.getOffereventoitem().equals("")) || !(carrelloBean.getOfferpernottoitem().equals("")) || !(carrelloBean.getOffertrasportoitem().equals(""))){
         System.out.println("Qualcosa non è null");
         if(carrelloBean.addItem() || !carrelloBean.carrelloempty()) {
             System.out.println("True");%>
         <jsp:forward page="Pagamento.jsp"/>
-<%      }
+<%      }}
 }
 %>
 
@@ -309,44 +307,7 @@
                 </div>-->
             </div>
         </div>
-    </div>
 
-
-
-    <div class="row">
-        <div class="col s9">
-            <!-- Teal page content  -->
-            <div class="card-panel teal lighten-2"></div>
-           </div>
-
-    </div>
-
-    <div class="row">
-        <div class="col s9">
-            <!-- Teal page content  -->
-            <div class="card-panel teal lighten-2"></div>
-        </div>
-
-    </div>
-
-
-    <script>
-        function myFunction() {
-            var x, text;
-
-            // Get the value of the input field with id="numb"
-            x = document.getElementById("artistbutton").value;
-
-            // If x is Not a Number or less than one or greater than 10
-            if (isNaN(x) || x < 1 || x > 10) {
-                text = "Input not valid";
-            } else {
-                text = "Input OK";
-            }
-            document.getElementById("demo").innerHTML = text;
-        }
-    </script>
-    <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     </body>
