@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - myfirsthibernatedb@localhost" uuid="ec60ca41-6bee-49ec-9afd-8806fbbfb677">
+      <secret-storage>master_key</secret-storage>
+      <user-name>newuser</user-name>
+      <schema-pattern>myfirsthibernatedb.*</schema-pattern>
+      <default-schemas>myfirsthibernatedb.*</default-schemas>
+    </data-source>
+  </component>
+</project>
