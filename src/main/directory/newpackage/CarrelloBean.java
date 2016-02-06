@@ -1,9 +1,6 @@
 package newpackage;
 
-import newpackage.EntityPackage.OffertaEvento;
-import newpackage.EntityPackage.OffertaPernotto;
-import newpackage.EntityPackage.OffertaTrasporto;
-import newpackage.EntityPackage.Pacchetto;
+import newpackage.EntityPackage.*;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,6 +15,7 @@ public class CarrelloBean implements Serializable{
     //private ArrayList<OffertaEvento> offertaEventoArrayList;
     //private ArrayList<OffertaPernotto> offertaPernottoArrayList;
     //private ArrayList<OffertaTrasporto> offertaTrasportoArrayList;
+    private int idcart;
     private ArrayList<Object> itemList;
     private String packetitem;
     private String offereventoitem;
@@ -38,6 +36,33 @@ public class CarrelloBean implements Serializable{
         //this.offertaEventoArrayList = new ArrayList<OffertaEvento>();
         //this.packetlist = new ArrayList<Pacchetto>();
     }
+
+    public CarrelloBean(Carrello carrello){
+        this.idcart = carrello.getId();
+        this.packetitem = "";
+        this.offereventoitem = "";
+        this.offerpernottoitem = "";
+        this.offertrasportoitem = "";
+        this.itemList = new ArrayList<Object>();
+        this.utenteBean = null;
+
+        for(Object o: carrello.getHasEvent()){
+            this.itemList.add(fromObjtoBean(o));
+        }
+
+        for(Object o: carrello.getHasPacket()){
+            this.itemList.add(fromObjtoBean(o));
+        }
+
+        for(Object o: carrello.getHasPer()){
+            this.itemList.add(fromObjtoBean(o));
+        }
+
+        for(Object o: carrello.getHasTras()){
+            this.itemList.add(fromObjtoBean(o));
+        }
+    }
+
 
     public UtenteBean getUtenteBean() {
         return utenteBean;
@@ -131,14 +156,18 @@ public class CarrelloBean implements Serializable{
         return null;
     }
 
-    public boolean addItem() {
+    public boolean removeItem() {
 
         if (!this.packetitem.equals("")) {
-            PacchettoController pc = PacchettoController.getInstance();
-            Pacchetto p = pc.findByID(this.packetitem);
-            if (p != null) {
+            //PacchettoController pc = PacchettoController.getInstance();
+            //Pacchetto p = pc.findByID(this.packetitem);
+            GestioneCarrelloController gc = GestioneCarrelloController.getInstance();
+            Object o = gc.removeItem(this.packetitem, "Pacchetto", String.valueOf(this.idcart));
+
+            if (o != null) {
+                Pacchetto p = (Pacchetto) o;
                 //for(Pacchetto pack : this.packetlist){
-                for(Object object : this.itemList){
+                /*for(Object object : this.itemList){
                     //if(pack.getId().equals(p.getId())){
                     if(object instanceof PacchettoBean){
                         if(((PacchettoBean)object).getId() ==  p.getId()) {
@@ -146,15 +175,133 @@ public class CarrelloBean implements Serializable{
                             return false;
                         }
                     }
-                }
+                }*/
+                this.itemList.remove(fromObjtoBean(p));
+                this.packetitem = "";
+                return true;
+            }
+            return false;
+
+        } else if (!this.offereventoitem.equals("")) {
+            GestioneCarrelloController gc = GestioneCarrelloController.getInstance();
+            Object o = gc.removeItem(this.offereventoitem, "OffertaEvento", String.valueOf(this.idcart));
+
+            if (o != null) {
+                OffertaEvento oe = (OffertaEvento) o;
+
+                this.itemList.remove(fromObjtoBean(oe));
+                this.offereventoitem = "";
+                return true;
+            }
+            return false;
+
+
+        } else if (!this.offerpernottoitem.equals("")) {
+            GestioneCarrelloController gc = GestioneCarrelloController.getInstance();
+            Object o = gc.removeItem(this.offerpernottoitem, "OffertaPernotto", String.valueOf(this.idcart));
+
+            if (o != null) {
+                OffertaPernotto op = (OffertaPernotto) o;
+
+                this.itemList.remove(fromObjtoBean(op));
+                this.offerpernottoitem = "";
+                return true;
+            }
+            return false;
+
+
+        } else if (!this.offertrasportoitem.equals("")) {
+            GestioneCarrelloController gc = GestioneCarrelloController.getInstance();
+            Object o = gc.removeItem(this.offertrasportoitem, "OffertaTrasporto", String.valueOf(this.idcart));
+
+            if (o != null) {
+                OffertaTrasporto ot = (OffertaTrasporto) o;
+
+                this.itemList.remove(fromObjtoBean(ot));
+                this.offertrasportoitem = "";
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+    public boolean addItem() {
+
+        if (!this.packetitem.equals("")) {
+            //PacchettoController pc = PacchettoController.getInstance();
+            //Pacchetto p = pc.findByID(this.packetitem);
+            GestioneCarrelloController gc = GestioneCarrelloController.getInstance();
+            Object o = gc.addItem(this.packetitem,"Pacchetto",String.valueOf(this.idcart));
+
+            if (o != null) {
+                Pacchetto p = (Pacchetto) o;
+                //for(Pacchetto pack : this.packetlist){
+                /*for(Object object : this.itemList){
+                    //if(pack.getId().equals(p.getId())){
+                    if(object instanceof PacchettoBean){
+                        if(((PacchettoBean)object).getId() ==  p.getId()) {
+                            this.packetitem = "";
+                            return false;
+                        }
+                    }
+                }*/
                 this.itemList.add(fromObjtoBean(p));
-                //this.packetlist.add(p);
                 this.packetitem = "";
                 return true;
             }
             return false;
         }
 
+        else if(!this.offereventoitem.equals("")){
+            GestioneCarrelloController gc = GestioneCarrelloController.getInstance();
+            Object o = gc.addItem(this.offereventoitem,"OffertaEvento",String.valueOf(this.idcart));
+
+            if (o != null) {
+                OffertaEvento oe = (OffertaEvento) o;
+
+                this.itemList.add(fromObjtoBean(oe));
+                this.offereventoitem = "";
+                return true;
+            }
+            return false;
+
+
+        }
+
+        else if(!this.offerpernottoitem.equals("")){
+            GestioneCarrelloController gc = GestioneCarrelloController.getInstance();
+            Object o = gc.addItem(this.offerpernottoitem,"OffertaPernotto",String.valueOf(this.idcart));
+
+            if (o != null) {
+                OffertaPernotto op = (OffertaPernotto) o;
+
+                this.itemList.add(fromObjtoBean(op));
+                this.offerpernottoitem = "";
+                return true;
+            }
+            return false;
+
+
+        }
+
+        else if(!this.offertrasportoitem.equals("")){
+            GestioneCarrelloController gc = GestioneCarrelloController.getInstance();
+            Object o = gc.addItem(this.offertrasportoitem,"OffertaTrasporto",String.valueOf(this.idcart));
+
+            if (o != null) {
+                OffertaTrasporto ot = (OffertaTrasporto) o;
+
+                this.itemList.add(fromObjtoBean(ot));
+                this.offertrasportoitem = "";
+                return true;
+            }
+            return false;
+        }
+
+
+
+        /*
         if (!this.offereventoitem.equals("") || !this.offertrasportoitem.equals("") || !this.offerpernottoitem.equals("")) {
 
             OffertaController oc = OffertaController.getInstance();
@@ -219,16 +366,24 @@ public class CarrelloBean implements Serializable{
                     return true;
                 }
             }
-        }
+        }*/
         return false;
     }
 
     public boolean Pay(){
         PagamentoController pc = PagamentoController.getInstance();
+
         //pc.Pay(this.packetlist,this.offertaEventoArrayList,this.offertaPernottoArrayList,this.offertaTrasportoArrayList);
 
         //return this.packetlist.isEmpty() && this.offertaEventoArrayList.isEmpty() && this.offertaTrasportoArrayList.isEmpty() && this.offertaPernottoArrayList.isEmpty();
         return false;
     }
 
+    public int getIdcart() {
+        return idcart;
+    }
+
+    public void setIdcart(int idcart) {
+        this.idcart = idcart;
+    }
 }

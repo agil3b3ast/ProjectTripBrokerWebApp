@@ -4,6 +4,7 @@ import newpackage.EntityPackage.Carrello;
 import newpackage.EntityPackage.WebClient;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by Alessandro on 29/01/2016.
@@ -130,7 +131,7 @@ public class UtenteBean implements Serializable{
     }
 
     public CarrelloBean buildFromEntity(Carrello carrello){
-        CarrelloBean cb = new CarrelloBean();
+        CarrelloBean cb = new CarrelloBean(carrello);
         cb.setUtenteBean(this);
         return cb;
     }
