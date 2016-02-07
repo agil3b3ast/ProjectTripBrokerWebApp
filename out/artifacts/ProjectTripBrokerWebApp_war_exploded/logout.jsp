@@ -1,5 +1,6 @@
 <%@ page import="newpackage.CarrelloBean" %>
 <%@ page import="newpackage.UtenteBean" %>
+<%@ page import="newpackage.DBResourcesManager" %>
 <%--
   Created by IntelliJ IDEA.
   User: Alessandro

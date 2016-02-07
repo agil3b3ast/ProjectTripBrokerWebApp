@@ -66,4 +66,14 @@ public class Offerta implements Serializable{
         this.città = città;
     }
 
+    private boolean toBuy;
+
+    @Basic
+    public boolean isToBuy() {
+        return toBuy;
+    }
+
+    public void setToBuy(boolean toBuy) {
+        this.toBuy = toBuy;
+    }
 }

@@ -26,7 +26,8 @@
 <%  }
     if(request.getParameter("pay") != null){
         if(request.getParameter("pay").equals("pay")){
-            if(!carrelloBean.Pay()){%>
+            Object o = carrelloBean.Pay();%>
+            <%if(o != null){%>
 
     <div class="row">
         <div class="card blue-grey">
@@ -52,8 +53,9 @@
     }
     if(request.getParameter("confirmRemovePack") != null || request.getParameter("confirmRemoveEve") != null || request.getParameter("confirmRemoveTras") != null || request.getParameter("confirmRemovePer") != null){
         System.out.println("Rimuovo item");
-    if(!(carrelloBean.getPacketitem().equals("")) || !(carrelloBean.getOffereventoitem().equals("")) || !(carrelloBean.getOfferpernottoitem().equals("")) || !(carrelloBean.getOffertrasportoitem().equals(""))){
-        System.out.println("Item da rimuovere, qualcosa non è null");
+    //if(!(carrelloBean.getPacketitem().equals("")) || !(carrelloBean.getOffereventoitem().equals("")) || !(carrelloBean.getOfferpernottoitem().equals("")) || !(carrelloBean.getOffertrasportoitem().equals(""))){
+    if(request.getParameter("packetitem") != null || request.getParameter("offereventoitem") !=null || request.getParameter("offerpernottoitem") != null || request.getParameter("offertrasportoitem") != null){
+            System.out.println("Item da rimuovere, non è null");
     if(!carrelloBean.removeItem()){%>
     <div class="row">
         <div class="card blue-grey">
@@ -204,6 +206,5 @@
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
-
     </body>
 </html>

@@ -18,7 +18,7 @@ public class GestioneCarrelloController {
     public Object addItem(String iditem,String typeitem, String idcart){
         DBResourcesManager.initHibernate();
         if(typeitem.equals("Pacchetto")){
-            Pacchetto p = DAOFactory.getPacchettoDAO().findByID(iditem);
+            Pacchetto p = DAOFactory.getPacchettoDAO().findByID(Integer.valueOf(iditem));
 
             if(p != null){
                 Carrello c = DAOFactory.getCarrelloDAO().addToCart(idcart,p);
@@ -69,7 +69,7 @@ public class GestioneCarrelloController {
     public Object removeItem(String iditem,String typeitem, String idcart){
         DBResourcesManager.initHibernate();
         if(typeitem.equals("Pacchetto")){
-            Pacchetto p = DAOFactory.getPacchettoDAO().findByID(iditem);
+            Pacchetto p = DAOFactory.getPacchettoDAO().findByID(Integer.valueOf(iditem));
 
             if(p != null){
                 Carrello c = DAOFactory.getCarrelloDAO().removeFromCart(idcart,p);

@@ -189,225 +189,243 @@
       <column id="57" parent="10" name="dataScadenza">
         <data-type>date</data-type>
       </column>
-      <key id="58" parent="10" name="PRIMARY">
+      <column id="58" parent="10" name="toBuy">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="59" parent="10" name="PRIMARY">
         <columns>eveID</columns>
         <primary>1</primary>
       </key>
-      <column id="59" parent="11" name="perID">
+      <column id="60" parent="11" name="perID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="60" parent="11" name="città">
+      <column id="61" parent="11" name="città">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="61" parent="11" name="nome">
+      <column id="62" parent="11" name="nome">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="62" parent="11" name="ofID">
+      <column id="63" parent="11" name="ofID">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="63" parent="11" name="prezzo">
+      <column id="64" parent="11" name="prezzo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="64" parent="11" name="numeroNotti">
+      <column id="65" parent="11" name="numeroNotti">
         <data-type>int(11)</data-type>
       </column>
-      <column id="65" parent="11" name="stelle">
+      <column id="66" parent="11" name="stelle">
         <data-type>int(11)</data-type>
       </column>
-      <column id="66" parent="11" name="tipologia">
+      <column id="67" parent="11" name="tipologia">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="67" parent="11" name="dataScadenza">
+      <column id="68" parent="11" name="dataScadenza">
         <data-type>date</data-type>
       </column>
-      <key id="68" parent="11" name="PRIMARY">
+      <column id="69" parent="11" name="toBuy">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="70" parent="11" name="PRIMARY">
         <columns>perID</columns>
         <primary>1</primary>
       </key>
-      <column id="69" parent="12" name="trasID">
+      <column id="71" parent="12" name="trasID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="70" parent="12" name="città">
+      <column id="72" parent="12" name="città">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="71" parent="12" name="nome">
+      <column id="73" parent="12" name="nome">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="72" parent="12" name="ofID">
+      <column id="74" parent="12" name="ofID">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="73" parent="12" name="prezzo">
+      <column id="75" parent="12" name="prezzo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="74" parent="12" name="cittàPartenza">
+      <column id="76" parent="12" name="cittàPartenza">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="75" parent="12" name="durata">
+      <column id="77" parent="12" name="durata">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="76" parent="12" name="tipologia">
+      <column id="78" parent="12" name="tipologia">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="77" parent="12" name="dataScadenza">
+      <column id="79" parent="12" name="dataScadenza">
         <data-type>date</data-type>
       </column>
-      <key id="78" parent="12" name="PRIMARY">
+      <column id="80" parent="12" name="toBuy">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="81" parent="12" name="PRIMARY">
         <columns>trasID</columns>
         <primary>1</primary>
       </key>
-      <column id="79" parent="13" name="id">
+      <column id="82" parent="13" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="80" parent="13" name="nome">
+      <column id="83" parent="13" name="nome">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="81" parent="13" name="prezzo">
+      <column id="84" parent="13" name="prezzo">
         <data-type>int(11)</data-type>
       </column>
-      <column id="82" parent="13" name="offertaPernotto_perID">
+      <column id="85" parent="13" name="offertaPernotto_perID">
         <data-type>int(11)</data-type>
       </column>
-      <column id="83" parent="13" name="offertaTrasporto_trasID">
+      <column id="86" parent="13" name="offertaTrasporto_trasID">
         <data-type>int(11)</data-type>
       </column>
-      <column id="84" parent="13" name="stato">
+      <column id="87" parent="13" name="stato">
         <data-type>bit(1)</data-type>
       </column>
-      <key id="85" parent="13" name="PRIMARY">
+      <column id="88" parent="13" name="toBuy">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="89" parent="13" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="86" parent="13" name="FK_99w9cjkjnw1cxykbiyshrm6qf">
+      <foreign-key id="90" parent="13" name="FK_99w9cjkjnw1cxykbiyshrm6qf">
         <columns>offertaPernotto_perID</columns>
         <ref-key>offertapernotto.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="87" parent="13" name="FK_nu3085b8vs60llpt9v1jf831f">
+      <foreign-key id="91" parent="13" name="FK_nu3085b8vs60llpt9v1jf831f">
         <columns>offertaTrasporto_trasID</columns>
         <ref-key>offertatrasporto.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="88" parent="14" name="Pacchetto_id">
+      <column id="92" parent="14" name="Pacchetto_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="89" parent="14" name="offertaEvento_eveID">
+      <column id="93" parent="14" name="offertaEvento_eveID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <foreign-key id="90" parent="14" name="FK_4770xdnj2hpcqbagipkigd0ae">
+      <foreign-key id="94" parent="14" name="FK_4770xdnj2hpcqbagipkigd0ae">
         <columns>Pacchetto_id</columns>
         <ref-key>pacchetto.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="91" parent="14" name="FK_4gguip6ohf8d9pcjqo5h3eyrf">
+      <foreign-key id="95" parent="14" name="FK_4gguip6ohf8d9pcjqo5h3eyrf">
         <columns>offertaEvento_eveID</columns>
         <ref-key>offertaevento.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="92" parent="15" name="usID">
+      <column id="96" parent="15" name="usID">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="93" parent="15" name="Cognome">
+      <column id="97" parent="15" name="Cognome">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="94" parent="15" name="Nome">
+      <column id="98" parent="15" name="Nome">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="95" parent="15" name="password">
+      <column id="99" parent="15" name="password">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="96" parent="15" name="username">
+      <column id="100" parent="15" name="username">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="97" parent="15" name="ruolo">
+      <column id="101" parent="15" name="ruolo">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="98" parent="15" name="DTYPE">
+      <column id="102" parent="15" name="DTYPE">
         <mandatory>1</mandatory>
         <data-type>varchar(31)</data-type>
       </column>
-      <key id="99" parent="15" name="PRIMARY">
+      <key id="103" parent="15" name="PRIMARY">
         <columns>usID</columns>
         <primary>1</primary>
       </key>
-      <column id="100" parent="16" name="vid">
+      <column id="104" parent="16" name="vid">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="101" parent="16" name="discount">
+      <column id="105" parent="16" name="discount">
         <mandatory>1</mandatory>
         <data-type>double</data-type>
       </column>
-      <column id="102" parent="16" name="maxP">
+      <column id="106" parent="16" name="maxP">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="103" parent="16" name="minP">
+      <column id="107" parent="16" name="minP">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="104" parent="16" name="numreserved">
+      <column id="108" parent="16" name="numreserved">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="105" parent="16" name="numPacket_id">
+      <column id="109" parent="16" name="numPacket_id">
         <data-type>int(11)</data-type>
       </column>
-      <column id="106" parent="16" name="participants">
+      <column id="110" parent="16" name="participants">
         <data-type>tinyblob</data-type>
       </column>
-      <key id="107" parent="16" name="PRIMARY">
+      <key id="111" parent="16" name="PRIMARY">
         <columns>vid</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="108" parent="16" name="FK_rcaudkr2c2bwjh1b4a05bm545">
+      <foreign-key id="112" parent="16" name="FK_rcaudkr2c2bwjh1b4a05bm545">
         <columns>numPacket_id</columns>
         <ref-key>pacchetto.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="109" parent="17" name="id">
+      <column id="113" parent="17" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="110" parent="17" name="birthday">
+      <column id="114" parent="17" name="birthday">
         <data-type>date</data-type>
       </column>
-      <column id="111" parent="17" name="cognome">
+      <column id="115" parent="17" name="cognome">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="112" parent="17" name="dataIscrizione">
+      <column id="116" parent="17" name="dataIscrizione">
         <data-type>date</data-type>
       </column>
-      <column id="113" parent="17" name="nickname">
+      <column id="117" parent="17" name="nickname">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="114" parent="17" name="nome">
+      <column id="118" parent="17" name="nome">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="115" parent="17" name="password">
+      <column id="119" parent="17" name="password">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="116" parent="17" name="hasCart_id">
+      <column id="120" parent="17" name="hasCart_id">
         <data-type>int(11)</data-type>
       </column>
-      <key id="117" parent="17" name="PRIMARY">
+      <key id="121" parent="17" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="118" parent="17" name="FK_etsxioskdx0wl5qh4k0k4rlt3">
+      <foreign-key id="122" parent="17" name="FK_etsxioskdx0wl5qh4k0k4rlt3">
         <columns>hasCart_id</columns>
         <ref-key>carrello.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>

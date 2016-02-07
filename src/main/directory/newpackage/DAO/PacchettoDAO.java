@@ -14,7 +14,6 @@ import java.util.List;
  */
 public class PacchettoDAO {
 
-
     public void store(Pacchetto e) {
         // start a session
         Session s = DBResourcesManager.getSession();
@@ -37,9 +36,9 @@ public class PacchettoDAO {
     public  List<Pacchetto> getList() {
         Session s = DBResourcesManager.getSession();
 
-        String query = "from Pacchetto";
+        String query = "from Pacchetto pacchetto where pacchetto.stato = true and pacchetto.toBuy = true order by pacchetto.prezzo";
         @SuppressWarnings("unchecked")
-        List<Pacchetto> pacchetto = s.createQuery(query).list();
+        List<Pacchetto> pacchetto = s.createQuery(query).setMaxResults(10).list();
         if(pacchetto.size()>0) {
             if (pacchetto.get(0).getOffertaPernotto() == null) {
                 System.out.println("Offerta pernotto non esistente");
@@ -59,17 +58,11 @@ public class PacchettoDAO {
         }
     }
 
-    public Pacchetto findByID(String idtofind){
+    public Pacchetto findByID(int idtofind){
         Session s = DBResourcesManager.getSession();
-        String query = "from Pacchetto pacchetto where pacchetto.id='"+idtofind+"'";
-        List<Pacchetto> p = s.createQuery(query).list();
-        if(p.size() > 1 || p.isEmpty()){
-            System.out.println("Lista con più di un elemento o vuota");
-            s.close();
-            return null;
-        }
+        Pacchetto p = (Pacchetto)s.get(Pacchetto.class , idtofind);
         s.close();
-        return p.get(0);
+        return p;
     }
 
     public  List<Pacchetto> findNotApproved() {
@@ -85,6 +78,76 @@ public class PacchettoDAO {
             s.close();
             return null;
         }
+    }
+
+    public boolean checkToBuy(int id){
+        Session s = DBResourcesManager.getSession();
+
+        Transaction tx = null;
+        try{
+            tx = s.beginTransaction();
+            Pacchetto p = (Pacchetto)s.get(Pacchetto.class , id);
+            if(!p.isToBuy()) {
+                s.close();
+                return false;
+            }
+            p.setToBuy(false);
+            s.update(p);
+            tx.commit();
+            s.close();
+            return true;
+        }catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public Pacchetto discardBuyPack(int id)
+    {
+        Session s = DBResourcesManager.getSession();
+
+        Transaction tx = null;
+        try{
+            tx = s.beginTransaction();
+            Pacchetto p = (Pacchetto)s.get(Pacchetto.class , id);
+            if(p != null){
+                p.setToBuy(true);
+                s.update(p);
+                tx.commit();
+            }
+            s.close();
+            return p;
+        }catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public Pacchetto findBuyPack()
+    {
+        Session s = DBResourcesManager.getSession();
+
+        Transaction tx = null;
+        try{
+            tx = s.beginTransaction();
+            String query = "from Pacchetto pacchetto where pacchetto.toBuy = true";
+            Pacchetto p= (Pacchetto) s.createQuery(query).uniqueResult();
+            if(p != null){
+                p.setToBuy(false);
+                s.update(p);
+                tx.commit();
+            }
+            s.close();
+            return p;
+        }catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
 

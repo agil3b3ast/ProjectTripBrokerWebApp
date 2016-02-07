@@ -87,4 +87,15 @@ public class Pacchetto implements Serializable{
     public void setStato(Boolean stato) {
         this.stato = stato;
     }
+
+    private boolean toBuy;
+
+    @Basic
+    public boolean isToBuy() {
+        return toBuy;
+    }
+
+    public void setToBuy(boolean toBuy) {
+        this.toBuy = toBuy;
+    }
 }

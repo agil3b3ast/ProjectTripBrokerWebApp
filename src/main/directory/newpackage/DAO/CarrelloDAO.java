@@ -2,6 +2,7 @@ package newpackage.DAO;
 
 import newpackage.DBResourcesManager;
 import newpackage.EntityPackage.Carrello;
+import newpackage.EntityPackage.OffertaEvento;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -107,6 +108,28 @@ public class CarrelloDAO {
             System.out.println("Hibernate exception");
             return null;
         }
+    }
+
+    public void payFromCart(int idtofind){
+        Session s = DBResourcesManager.getSession();
+
+        try{
+        Transaction tx = s.beginTransaction();
+
+        Carrello carrello = (Carrello) s.get(Carrello.class , idtofind);
+        if(carrello != null){
+            carrello.emptyCart();
+            s.update(carrello);
+            tx.commit();
+            s.close();
+
+        }
+        }
+        catch(HibernateException e){
+                s.close();
+                e.printStackTrace();
+        }
+
     }
 
 

@@ -5,6 +5,7 @@ import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Iterator;
 import java.util.List;
 
 @Entity
@@ -159,4 +160,10 @@ public class Carrello implements Serializable{
         return false;
     }
 
+    public void emptyCart(){
+        this.hasEvent.clear();
+        this.hasPer.clear();
+        this.hasPacket.clear();
+        this.hasTras.clear();
+    }
 }

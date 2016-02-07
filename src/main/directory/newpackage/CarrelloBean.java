@@ -50,6 +50,7 @@ public class CarrelloBean implements Serializable{
             this.itemList.add(fromObjtoBean(o));
         }
 
+
         for(Object o: carrello.getHasPacket()){
             this.itemList.add(fromObjtoBean(o));
         }
@@ -410,13 +411,19 @@ public class CarrelloBean implements Serializable{
         return false;
     }
 
-    public boolean Pay(){
+    public Object Pay(){
         PagamentoController pc = PagamentoController.getInstance();
-
+        Object o = pc.Pay(this.itemList,idcart);
+        if(o == null)
+        {
+            this.itemList.clear();
+            return null;
+        }
+        return o;
         //pc.Pay(this.packetlist,this.offertaEventoArrayList,this.offertaPernottoArrayList,this.offertaTrasportoArrayList);
 
         //return this.packetlist.isEmpty() && this.offertaEventoArrayList.isEmpty() && this.offertaTrasportoArrayList.isEmpty() && this.offertaPernottoArrayList.isEmpty();
-        return false;
+        //return false;
     }
 
     public int getIdcart() {

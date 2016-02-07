@@ -1,6 +1,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="newpackage.OffertaBean" %>
 <%@ page import="newpackage.TipoOffertaEvento" %>
+<%@ page import="newpackage.OffertaEventoBean" %>
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
@@ -14,6 +15,10 @@
 
 <jsp:useBean id="utenteBean" class="newpackage.UtenteBean" scope="session"/>
 <jsp:setProperty name="utenteBean" property="*"/>
+
+<jsp:useBean id="carrelloBean" scope="session"
+             class="newpackage.CarrelloBean"/>
+<jsp:setProperty name="carrelloBean" property="*"/>
 
 <%
     if (offertaBean.getOftype() != null) {
@@ -84,6 +89,15 @@
                             <div class="collapsible-body"><div class="row"><div class="col"><img src="http://orig15.deviantart.net/1614/f/2010/217/e/0/biffy_clyro_i_by_henrikack.jpg" style="margin-top: 10px; width: 180px; height: 150px;"></div><div class="col">
                                 <p>Prezzo <%=ls.get(i).getOfprice()%><br>Data di scadenza <%=ls.get(i).getOfdateexpired()%></br></p>
                             </div></div></div>
+                            <%if(utenteBean.isLogged()){%>
+                            <div class="card-action">
+                                <form action="Catalogo.jsp" name="myform5" method="post">
+                                    <input hidden value="<%=((OffertaEventoBean)ls.get(i)).getOfid()%>" name="offereventoitem" id="offereventoitem">
+                                    <button class="btn-flat waves-effect waves-light" type="submit">Acquista/Aggiungi
+                                    </button>
+                                </form>
+                            </div>
+                            <%}%>
                         </li>
                         <%}}else{%>
                         <li>

@@ -22,7 +22,7 @@ public class OffertaPernottoDAO extends OffertaDAO {
     public Object getList() {
         Session s = DBResourcesManager.getSession();
 
-        String query = "from OffertaPernotto";
+        String query = "from OffertaPernotto offertaPernotto where offertaPernotto.toBuy = true";
         @SuppressWarnings("unchecked")
         List<OffertaPernotto> offerte = s.createQuery(query).list();
         if(offerte.size()>0){
@@ -37,7 +37,7 @@ public class OffertaPernottoDAO extends OffertaDAO {
     @Override
     public Object findtype(String type) {
         Session s = DBResourcesManager.getSession();
-        String query = "from OffertaPernotto offertaPernotto where offertaPernotto.tipologia = '"+type+"'";
+        String query = "from OffertaPernotto offertaPernotto where where offertaPernotto.toBuy = true and offertaPernotto.tipologia = '"+type+"'";
         @SuppressWarnings("unchecked")
         List<OffertaPernotto> offerte = s.createQuery(query).list();
         if(offerte.size()>0) {
@@ -142,7 +142,7 @@ public class OffertaPernottoDAO extends OffertaDAO {
 
         if (!ls.isEmpty()) {
             //sb.append(initquery).append(" where");
-            initquery = initquery + " where ";
+            initquery = initquery + " where offertaPernotto.toBuy = true and ";
         }
 
         for (int i = 0; i < ls.size(); i++) {

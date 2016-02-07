@@ -1,12 +1,13 @@
 package newpackage;
 
 import newpackage.DAOFactory.DAOFactory;
-import newpackage.EntityPackage.Carrello;
-import newpackage.EntityPackage.WebClient;
+import newpackage.EntityPackage.*;
 
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 
 /**
@@ -44,6 +45,10 @@ public class RegistrazioneController {
 
             WebClient webclient = new WebClient(nickname,password,name,surname,newdate);
             Carrello carrello = new Carrello();
+            carrello.setHasEvent(new ArrayList<OffertaEvento>());
+            carrello.setHasPacket(new ArrayList<Pacchetto>());
+            carrello.setHasPer(new ArrayList<OffertaPernotto>());
+            carrello.setHasTras(new ArrayList<OffertaTrasporto>());
             DAOFactory.getCarrelloDAO().store(carrello);
 
             webclient.setHasCart(carrello);

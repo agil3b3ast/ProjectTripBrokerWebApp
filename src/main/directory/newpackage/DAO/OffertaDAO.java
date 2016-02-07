@@ -2,8 +2,12 @@ package newpackage.DAO;
 
 import newpackage.DBResourcesManager;
 import newpackage.EntityPackage.Offerta;
+import newpackage.EntityPackage.OffertaEvento;
+import newpackage.TipoOfferta;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.bytecode.buildtime.spi.ClassDescriptor;
 
 import java.util.List;
 
@@ -31,6 +35,83 @@ public abstract class OffertaDAO {
     public abstract Object findtype(String type);
     public abstract void delof(int id);
     public abstract Object customSearch(List<String> ls);
+
+    public boolean checkToBuy(int id, Class c){
+        Session s = DBResourcesManager.getSession();
+
+        Transaction tx = null;
+        try{
+            tx = s.beginTransaction();
+
+
+            Object res = (Object) s.get(c, id);
+
+            if(res instanceof OffertaEvento) {
+                OffertaEvento p = (OffertaEvento) res;
+
+                if (!p.isToBuy()) {
+                    s.close();
+                    return false;
+                }
+                p.setToBuy(false);
+                s.update(p);
+                tx.commit();
+                s.close();
+                return true;
+            }
+        }catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public Offerta discardBuyOf(int id, Class c)
+    {
+        Session s = DBResourcesManager.getSession();
+
+        Transaction tx = null;
+        try{
+            tx = s.beginTransaction();
+            Offerta p = (Offerta)s.get(c , id);
+            if(p != null){
+                p.setToBuy(true);
+                s.update(p);
+                tx.commit();
+            }
+            s.close();
+            return p;
+        }catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public Offerta findBuyOff(Class c)
+    {
+        Session s = DBResourcesManager.getSession();
+
+        Transaction tx = null;
+        try{
+            tx = s.beginTransaction();
+            String query = "from "+ c +" offerta where offerta.toBuy = true";
+            Offerta p= (Offerta) s.createQuery(query).uniqueResult();
+            if(p != null){
+                p.setToBuy(false);
+                s.update(p);
+                tx.commit();
+            }
+            s.close();
+            return p;
+        }catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 
     /*public Object customSearch(Object object){
         String query = "from "+ object.getClass().getSimpleName() + " where ";

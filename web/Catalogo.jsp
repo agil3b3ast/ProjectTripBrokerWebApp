@@ -1,15 +1,16 @@
 <%@ page import="newpackage.PacchettoBean" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="newpackage.TipoOffertaEvento" %>
 <!DOCTYPE html>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 
-<!-- Si dichiara la variabile offertaBean e istanzia un oggetto newpackage.offertaBean -->
+<!-- Si dichiara la variabile offertaBean e istanzia un oggetto newpackage.pacchettoBean -->
 <jsp:useBean id="pacchettoBean" scope="request"
              class="newpackage.PacchettoBean" />
 
-<!--  Setta automaticamente tutti gli attributi dell'oggetto offertaBean -->
+<!--  Setta automaticamente tutti gli attributi dell'oggetto pacchettoBean -->
 <jsp:setProperty name="pacchettoBean" property="*" />
 
 <jsp:useBean id="carrelloBean" scope="session"
@@ -22,20 +23,22 @@
 
 <!--  Setta automaticamente tutti gli attributi dell'oggetto utenteBean -->
 <jsp:setProperty name="utenteBean" property="*" />
-
+<!--Problema sul request get parameter di carrelloBean-->
 <%
-    if (!pacchettoBean.selectAll()) {
-        System.out.println("not null");
-    }
+
     if(utenteBean.isLogged()){
-    if(!(carrelloBean.getPacketitem().equals("")) || !(carrelloBean.getOffereventoitem().equals("")) || !(carrelloBean.getOfferpernottoitem().equals("")) || !(carrelloBean.getOffertrasportoitem().equals(""))){
-        System.out.println("Qualcosa non è null");
+    if(request.getParameter("packetitem") != null || request.getParameter("offereventoitem") !=null || request.getParameter("offerpernottoitem") != null || request.getParameter("offertrasportoitem") != null){
+        System.out.println("Un item non è null");
         if(carrelloBean.addItem() || !carrelloBean.carrelloempty()) {
-            System.out.println("True");%>
+            System.out.println("Item aggiunto");%>
         <jsp:forward page="Pagamento.jsp"/>
 <%      }}
 }
+    if (!pacchettoBean.selectAll()) {
+        System.out.println("Pacchetti ottenuti");
+    }
 %>
+
 
 <html>
 <head>
@@ -215,14 +218,7 @@
                                                             <li>Data scadenza <%=ls.get(i).getPofpernotto().getOfdateexpired()%></li>
                                                             <li>Prezzo <%=ls.get(i).getPofpernotto().getOfprice()%></li>
                                                         </ul>
-                                                        <div class="card-action">
-                                                            <form action="Catalogo.jsp" name="myform3" method="post">
-                                                                <input hidden value="<%=ls.get(i).getPofpernotto().getOfid()%>" type="text" name="offerpernottoitem" id="offerpernottoitem">
-                                                                <button class="btn-flat waves-effect waves-light" type="submit">Acquista
-                                                                    <i class="material-icons right">send</i>
-                                                                </button>
-                                                            </form>
-                                                        </div>
+                                                        <!--Card action-->
                                                     </div>
                                                 </div>
                                                 <div class="card blue-grey">
@@ -235,14 +231,7 @@
                                                             <li>Data scadenza <%=ls.get(i).getPoftrasporto().getOfdateexpired()%></li>
                                                             <li>Prezzo <%=ls.get(i).getPoftrasporto().getOfprice()%></li>
                                                         </ul>
-                                                        <div class="card-action">
-                                                            <form action="Catalogo.jsp" name="myform4" method="post">
-                                                                <input hidden value="<%=ls.get(i).getPoftrasporto().getOfid()%>" type="text" name="offertrasportoitem" id="offertrasportoitem">
-                                                                <button class="btn-flat waves-effect waves-light" type="submit">Acquista
-                                                                    <i class="material-icons right">send</i>
-                                                                </button>
-                                                            </form>
-                                                        </div>
+                                                        <!--Card Action-->
                                                     </div>
                                                 </div>
                                                 <%for(int j = 0;j<ls.get(i).getPofevento().size();j++){%>
@@ -256,14 +245,7 @@
                                                             <li>Data scadenza <%=ls.get(i).getPofevento().get(j).getOfdateexpired()%></li>
                                                             <li>Prezzo <%=ls.get(i).getPofevento().get(j).getOfprice()%></li>
                                                         </ul>
-                                                        <div class="card-action">
-                                                            <form action="Catalogo.jsp" name="myform5" method="post">
-                                                                <input hidden value="<%=ls.get(i).getPofevento().get(j).getOfid()%>" type="text" name="offereventoitem" id="offereventoitem">
-                                                                <button class="btn-flat waves-effect waves-light" type="submit">Acquista
-                                                                    <i class="material-icons right">send</i>
-                                                                </button>
-                                                            </form>
-                                                        </div>
+                                                        <!--Card action-->
                                                     </div>
                                                 </div>
                                                 <%}%>

@@ -1,6 +1,7 @@
 package newpackage.DAO;
 
 import newpackage.DBResourcesManager;
+import newpackage.EntityPackage.Offerta;
 import newpackage.EntityPackage.OffertaEvento;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -21,7 +22,7 @@ public class OffertaEventoDAO extends OffertaDAO {
 
         Session s = DBResourcesManager.getSession();
 
-        String query = "from OffertaEvento";
+        String query = "from OffertaEvento offertaEvento where offertaEvento.toBuy = true";
         @SuppressWarnings("unchecked")
         List<OffertaEvento> offerte = s.createQuery(query).list();
         if(offerte.size()>0){
@@ -54,7 +55,7 @@ public class OffertaEventoDAO extends OffertaDAO {
     @Override
     public Object findtype(String type) {
         Session s = DBResourcesManager.getSession();
-        String query = "from OffertaEvento offertaEvento where offertaEvento.tipologia = '"+type+"'";
+        String query = "from OffertaEvento offertaEvento where offertaEvento.toBuy = true and offertaEvento.tipologia = '"+type+"'";
         @SuppressWarnings("unchecked")
         List<OffertaEvento> offerte = s.createQuery(query).list();
         if(offerte.size()>0){
@@ -163,7 +164,7 @@ public class OffertaEventoDAO extends OffertaDAO {
 
         if (!ls.isEmpty()) {
             //sb.append(initquery).append(" where");
-            initquery = initquery + " where ";
+            initquery = initquery + " where offertaEvento.toBuy = true and ";
         }
 
         for (int i = 0; i < ls.size(); i++) {
