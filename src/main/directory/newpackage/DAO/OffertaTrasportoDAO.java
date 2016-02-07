@@ -50,7 +50,7 @@ public class OffertaTrasportoDAO extends OffertaDAO {
     @Override
     public Object findtype(String type) {
         Session s = DBResourcesManager.getSession();
-        String query = "from OffertaTrasporto offertaTrasporto where where offertaTrasporto.toBuy = true and offertaTrasporto.tipologia = '"+type+"'";
+        String query = "from OffertaTrasporto offertaTrasporto where offertaTrasporto.toBuy = true and offertaTrasporto.tipologia = '"+type+"'";
         @SuppressWarnings("unchecked")
         List<OffertaTrasporto> offerte = s.createQuery(query).list();
         if(offerte.size()>0){
