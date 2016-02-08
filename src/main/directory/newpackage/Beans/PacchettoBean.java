@@ -51,6 +51,8 @@ public class PacchettoBean implements Serializable{
         this.poftrasporto.setOfprice(newoftrasporto.getPrezzo());
         this.poftrasporto.setOfname(newoftrasporto.getNome());
         this.poftrasporto.setOfid(newoftrasporto.getTrasID());
+        this.poftrasporto.setCityFrom(newoftrasporto.getCittàPartenza());
+        this.poftrasporto.setOfcity(newoftrasporto.getCittà());
     }
     public void setPofpernotto(OffertaPernotto newofpernotto){
         this.pofpernotto.setOftype(newofpernotto.getTipologia());
@@ -58,6 +60,9 @@ public class PacchettoBean implements Serializable{
         this.pofpernotto.setOfprice(newofpernotto.getPrezzo());
         this.pofpernotto.setOfname(newofpernotto.getNome());
         this.pofpernotto.setOfid(newofpernotto.getPerID());
+        this.pofpernotto.setOfcity(newofpernotto.getCittà());
+        this.pofpernotto.setNumberOfNights(String.valueOf(newofpernotto.getNumeroNotti()));
+        this.pofpernotto.setStars(String.valueOf(newofpernotto.getStelle()));
     }
     public void setPofevento(List<OffertaEvento> loe){
         OffertaEventoBean offertaEventoBean = new OffertaEventoBean();
@@ -67,6 +72,7 @@ public class PacchettoBean implements Serializable{
             offertaEventoBean.setOftype(offertaEvento.getTipologia());
             offertaEventoBean.setOfprice(offertaEvento.getPrezzo());
             offertaEventoBean.setOfid(offertaEvento.getEveID());
+            offertaEventoBean.setOfcity(offertaEvento.getCittà());
             this.pofevento.add(offertaEventoBean);
         }
     }

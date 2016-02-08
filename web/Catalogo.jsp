@@ -221,6 +221,9 @@
                                                             <li><img src="<%=Avatars.Pernotto.getPath()%>" style="margin-top: 10px; width: 100px; height: 70px;"></li>
                                                             <li>Data scadenza <%=ls.get(i).getPofpernotto().getOfdateexpired()%></li>
                                                             <li>Prezzo <%=ls.get(i).getPofpernotto().getOfprice()%></li>
+                                                            <li>Città <%=ls.get(i).getPofpernotto().getOfcity()%></li>
+                                                            <li>Numero notti <%=ls.get(i).getPofpernotto().getNumberOfNights()%></li>
+                                                            <li>Numero stelle <%=ls.get(i).getPofpernotto().getStars()%></li>
                                                         </ul>
                                                         <!--Card action-->
                                                     </div>
@@ -234,6 +237,8 @@
                                                             <li><img src="<%=Avatars.Trasporto.getPath()%>" style="margin-top: 10px; width: 100px; height: 70px;"></li>
                                                             <li>Data scadenza <%=ls.get(i).getPoftrasporto().getOfdateexpired()%></li>
                                                             <li>Prezzo <%=ls.get(i).getPoftrasporto().getOfprice()%></li>
+                                                            <li>Città arrivo <%=ls.get(i).getPoftrasporto().getOfcity()%></li>
+                                                            <li>Città partenza <%=ls.get(i).getPoftrasporto().getCityFrom()%></li>
                                                         </ul>
                                                         <!--Card Action-->
                                                     </div>

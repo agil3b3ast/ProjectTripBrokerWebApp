@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7263c3ab-f0be-4520-b699-b3b226f64a54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/packet.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/random_points.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/Enumerations/Avatars.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Enumerations/Avatars.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/Beans/PacchettoBean.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Beans/PacchettoBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Catalogo.jsp" afterPath="$PROJECT_DIR$/web/Catalogo.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OffertaEvento.jsp" afterPath="$PROJECT_DIR$/web/OffertaEvento.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OffertaPernotto.jsp" afterPath="$PROJECT_DIR$/web/OffertaPernotto.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OffertaTrasporto.jsp" afterPath="$PROJECT_DIR$/web/OffertaTrasporto.jsp" />
     </list>
     <ignored path="ProjectTripBrokerWebApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,56 +121,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OffertaPernottoBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/OffertaPernottoBean.java">
+      <file leaf-file-name="CarrelloBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/CarrelloBean.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3587#3595#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormEventoOffer.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/FormEventoOffer.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.653847">
-              <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+              <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GestioneCarrelloController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Controllers/GestioneCarrelloController.java">
+      <file leaf-file-name="PacchettoBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/PacchettoBean.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Controllers/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Catalogo.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/Catalogo.jsp">
+      <file leaf-file-name="OffertaPernotto.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/OffertaPernotto.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40301317">
-              <caret line="175" column="73" selection-start-line="175" selection-start-column="73" selection-end-line="175" selection-end-column="73" />
+            <state vertical-scroll-proportion="-8.153846">
+              <caret line="81" column="165" selection-start-line="81" selection-start-column="165" selection-end-line="81" selection-end-column="165" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OffertaTrasporto.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/OffertaTrasporto.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.8461537">
+              <caret line="87" column="161" selection-start-line="87" selection-start-column="161" selection-end-line="87" selection-end-column="161" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OffertaEventoBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/OffertaEventoBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -197,18 +194,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OffertaController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Controllers/OffertaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="74" selection-start-line="85" selection-start-column="74" selection-end-line="85" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PacchettoController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Controllers/PacchettoController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -217,6 +202,16 @@
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Catalogo.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/Catalogo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47269303">
+              <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -242,7 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/directory/newpackage/UtenteBean.java" />
         <option value="$PROJECT_DIR$/src/main/directory/newpackage/DBResourcesManager.java" />
         <option value="$PROJECT_DIR$/src/main/directory/newpackage/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/directory/newpackage/DAO/UtenteDAO.java" />
@@ -279,9 +273,6 @@
         <option value="$PROJECT_DIR$/web/OffertaPernottoResponse.jsp" />
         <option value="$PROJECT_DIR$/web/FindTrasporto.jsp" />
         <option value="$PROJECT_DIR$/web/OffertaTrasportoResponse.jsp" />
-        <option value="$PROJECT_DIR$/web/OffertaEvento.jsp" />
-        <option value="$PROJECT_DIR$/web/OffertaTrasporto.jsp" />
-        <option value="$PROJECT_DIR$/web/OffertaPernotto.jsp" />
         <option value="$PROJECT_DIR$/src/main/directory/newpackage/OffertaController.java" />
         <option value="$PROJECT_DIR$/src/main/directory/newpackage/OffertaTrasportoBean.java" />
         <option value="$PROJECT_DIR$/src/main/directory/newpackage/OffertaPernottoBean.java" />
@@ -291,8 +282,12 @@
         <option value="$PROJECT_DIR$/web/FormEventoOffer.jsp" />
         <option value="$PROJECT_DIR$/src/main/directory/newpackage/RegistrazioneController.java" />
         <option value="$PROJECT_DIR$/src/main/directory/newpackage/Controllers/RegistrazioneController.java" />
-        <option value="$PROJECT_DIR$/web/Catalogo.jsp" />
         <option value="$PROJECT_DIR$/src/main/directory/newpackage/Enumerations/Avatars.java" />
+        <option value="$PROJECT_DIR$/web/OffertaEvento.jsp" />
+        <option value="$PROJECT_DIR$/web/OffertaPernotto.jsp" />
+        <option value="$PROJECT_DIR$/web/OffertaTrasporto.jsp" />
+        <option value="$PROJECT_DIR$/src/main/directory/newpackage/Beans/PacchettoBean.java" />
+        <option value="$PROJECT_DIR$/web/Catalogo.jsp" />
       </list>
     </option>
   </component>
@@ -481,6 +476,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Enumerations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTripBrokerWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTripBrokerWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newpackage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Beans" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1151,7 +1176,7 @@
       <workItem from="1454864550842" duration="281000" />
       <workItem from="1454864899331" duration="11000" />
       <workItem from="1454882358263" duration="4078000" />
-      <workItem from="1454921956017" duration="18102000" />
+      <workItem from="1454921956017" duration="19790000" />
     </task>
     <task id="LOCAL-00001" summary="Added Cart add/remove items">
       <created>1454763666619</created>
@@ -1195,7 +1220,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454947673354</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added new style">
+      <created>1454948372018</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1454948372018</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1207,7 +1238,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92220000" />
+    <option name="totallyTimeSpent" value="93908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1397,14 +1428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/PacchettoBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/OffertaBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35628742">
@@ -1460,14 +1483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/CarrelloBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.303681">
-          <caret line="293" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pernotto.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1493,30 +1508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.1933334">
           <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/OffertaEvento.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.34">
-          <caret line="101" column="129" selection-start-line="101" selection-start-column="129" selection-end-line="101" selection-end-column="129" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/OffertaTrasporto.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05666667">
-          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/OffertaPernotto.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35">
-          <caret line="80" column="127" selection-start-line="80" selection-start-column="127" selection-end-line="80" selection-end-column="127" />
           <folding />
         </state>
       </provider>
@@ -1566,17 +1557,6 @@
         <state vertical-scroll-proportion="-0.17">
           <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/OffertaEventoBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3254#3262#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1680,14 +1660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/a1224837/ec60ca41-6bee-49ec-9afd-8806fbbfb677/myfirsthibernatedb.pacchetto">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1714,10 +1686,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/OffertaEventoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OffertaEvento.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44821092">
+          <caret line="102" column="132" selection-start-line="102" selection-start-column="132" selection-end-line="102" selection-end-column="173" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OffertaPernotto.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OffertaTrasporto.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8461537">
+          <caret line="87" column="161" selection-start-line="87" selection-start-column="161" selection-end-line="87" selection-end-column="161" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/EntityPackage/Pacchetto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3734291">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3734291">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/CarrelloBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OffertaPernotto.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.153846">
+          <caret line="81" column="165" selection-start-line="81" selection-start-column="165" selection-end-line="81" selection-end-column="165" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/directory/newpackage/Beans/PacchettoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/Catalogo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40301317">
-          <caret line="175" column="73" selection-start-line="175" selection-start-column="73" selection-end-line="175" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.47269303">
+          <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -85,7 +85,7 @@
                 <li>
                     <div class="collapsible-header"><%=ls.get(i).getOfname()%></div>
                     <div class="collapsible-body"><div class="row"><div class="col"><img src="<%=Avatars.Trasporto.getPath()%>" style="margin-top: 10px; width: 180px; height: 150px;"></div><div class="col">
-                        <p>Prezzo <%=ls.get(i).getOfprice()%><br>Data di scadenza <%=ls.get(i).getOfdateexpired()%></br></p>
+                        <p>Prezzo <%=ls.get(i).getOfprice()%><br>Data di scadenza <%=ls.get(i).getOfdateexpired()%></br><br>Città <%=ls.get(i).getOfcity()%></br></p>
                     </div></div></div>
                     <%if(utenteBean.isLogged()){%>
                     <div class="card-action">
