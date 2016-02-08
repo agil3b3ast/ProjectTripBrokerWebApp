@@ -1,4 +1,4 @@
-<%@ page import="newpackage.TipoOffertaEvento" %><%--
+<%@ page import="newpackage.Enumerations.TipoOffertaEvento" %><%--
   Created by IntelliJ IDEA.
   User: Alessandro
   Date: 29/12/2015

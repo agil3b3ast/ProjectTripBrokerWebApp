@@ -10,12 +10,12 @@
 
 <!-- Si dichiara la variabile offertaBean e istanzia un oggetto newpackage.offertaBean -->
 <jsp:useBean id="findpernottoBean" scope="request"
-             class="newpackage.OffertaPernottoBean"/>
+             class="newpackage.Beans.OffertaPernottoBean"/>
 
 <!--  Setta automaticamente tutti gli attributi dell'oggetto offertaBean -->
 <jsp:setProperty name="findpernottoBean" property="*"/>
 
-<jsp:useBean id="utenteBean" class="newpackage.UtenteBean" scope="session"/>
+<jsp:useBean id="utenteBean" class="newpackage.Beans.UtenteBean" scope="session"/>
 <jsp:setProperty name="utenteBean" property="*"/>
 
 <%
@@ -47,6 +47,7 @@ if(request.getParameter("findMyOverNight")!= null){
                 </td>
                 <td width="20%"></td>
                 <td width="50%">
+                    <%request.setAttribute("findpernottoBean",findpernottoBean);%>
                     <jsp:include page="OffertaPernottoResponse.jsp"/>
                 </td>
             </tr>

@@ -1,6 +1,7 @@
-<%@ page import="newpackage.PacchettoBean" %>
+<%@ page import="newpackage.Beans.PacchettoBean" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="newpackage.TipoOffertaEvento" %>
+<%@ page import="newpackage.Enumerations.TipoOffertaEvento" %>
+<%@ page import="newpackage.Enumerations.Avatars" %>
 <!DOCTYPE html>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -8,29 +9,30 @@
 
 <!-- Si dichiara la variabile offertaBean e istanzia un oggetto newpackage.pacchettoBean -->
 <jsp:useBean id="pacchettoBean" scope="request"
-             class="newpackage.PacchettoBean" />
+             class="newpackage.Beans.PacchettoBean" />
 
 <!--  Setta automaticamente tutti gli attributi dell'oggetto pacchettoBean -->
 <jsp:setProperty name="pacchettoBean" property="*" />
 
 <jsp:useBean id="carrelloBean" scope="session"
-             class="newpackage.CarrelloBean"/>
+             class="newpackage.Beans.CarrelloBean"/>
 <jsp:setProperty name="carrelloBean" property="*"/>
 
 <!-- Si dichiara la variabile utenteBean e istanzia un oggetto newpackage.utenteBean -->
 <jsp:useBean id="utenteBean" scope="session"
-             class="newpackage.UtenteBean" />
+             class="newpackage.Beans.UtenteBean" />
 
 <!--  Setta automaticamente tutti gli attributi dell'oggetto utenteBean -->
 <jsp:setProperty name="utenteBean" property="*" />
-<!--Problema sul request get parameter di carrelloBean-->
+
 <%
 
     if(utenteBean.isLogged()){
-    if(request.getParameter("packetitem") != null || request.getParameter("offereventoitem") !=null || request.getParameter("offerpernottoitem") != null || request.getParameter("offertrasportoitem") != null){
-        System.out.println("Un item non è null");
-        if(carrelloBean.addItem() || !carrelloBean.carrelloempty()) {
-            System.out.println("Item aggiunto");%>
+    if(request.getParameter("packetitem") != null){//|| request.getParameter("offereventoitem") !=null || request.getParameter("offerpernottoitem") != null || request.getParameter("offertrasportoitem") != null){
+        carrelloBean.setOffertrasportoitem("");
+        carrelloBean.setOffereventoitem("");
+        carrelloBean.setOfferpernottoitem("");
+        if(carrelloBean.addItem() || !carrelloBean.carrelloempty()) {%>
         <jsp:forward page="Pagamento.jsp"/>
 <%      }}
 }
@@ -82,7 +84,7 @@
         }
     </script>
 </head>
-    <body background="nirvana.jpg">
+    <body background="background3.jpg">
     <!-- Navbar goes here
     <nav>
         <div class="nav-wrapper">
@@ -131,7 +133,7 @@
         <div class="col s4">
             <div class="card large">
                 <div class="card-image">
-                    <img src="background3.jpg">
+                    <img src="OffertaPernotto.jpg">
                     <span class="card-title">Pernottamenti</span>
                 </div>
                 <div class="card-content">
@@ -170,7 +172,7 @@
                                          <span class="card-title">
                                              <%=ls.get(i).getPname()%>
                                          </span>
-                                         <div class="row"><div class="col"><img src="http://orig15.deviantart.net/1614/f/2010/217/e/0/biffy_clyro_i_by_henrikack.jpg" style="margin-top: 10px; width: 180px; height: 150px;"></div><div class="col">
+                                         <div class="row"><div class="col"><img src="<%=Avatars.Packet.getPath()%>" style="margin-top: 10px; width: 180px; height: 150px;"></div><div class="col">
                                             <p>Prezzo <%=ls.get(i).getPprice()%></p></div>
                                         </div>
                                         <div class="card-action">
@@ -180,12 +182,14 @@
                                                         <a onclick="onClick(<%=i%>);" class="waves-effect waves-light">Dettagli</a>
                                                     </td>
                                                     <td width="50%">
+                                                        <%if(utenteBean.isLogged()){%>
                                                         <form action="Catalogo.jsp" name="myform2" method="post">
                                                             <input hidden value="<%=ls.get(i).getId()%>" type="text" name="packetitem" id="packetitem">
                                                             <button class="btn-flat waves-effect waves-light" type="submit">Acquista
                                                                 <i class="material-icons right">send</i>
                                                             </button>
                                                         </form>
+                                                        <%}%>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -201,11 +205,11 @@
                                                  <%=ls.get(i).getPname()%>
                                              </span>
                                         <div class="row">
-                                            <div class="col s5">
+                                            <!--<div class="col s5">
                                                 <p><button id="artistbutton" style="background: url(biffyclyro.jpeg); background-size:auto; height: 256px;width: 256px;" onclick="parent.location='login.jsp'"/></p>
-                                            </div>
+                                            </div>-->
                                             <div class="col s7">
-                                                <p>This is a packet description.
+                                                <p>Descrizione pacchetto.
                                                     <br>Prezzo <%=ls.get(i).getPprice()%>
                                                 </p>
                                                 <div class="card blue-grey">
@@ -214,7 +218,7 @@
                                                             Offerta Pernotto <%=ls.get(i).getPofpernotto().getOfname()%>
                                                         </span>
                                                         <ul>
-                                                            <li><img src="http://orig15.deviantart.net/1614/f/2010/217/e/0/biffy_clyro_i_by_henrikack.jpg" style="margin-top: 10px; width: 100px; height: 70px;"></li>
+                                                            <li><img src="<%=Avatars.Pernotto.getPath()%>" style="margin-top: 10px; width: 100px; height: 70px;"></li>
                                                             <li>Data scadenza <%=ls.get(i).getPofpernotto().getOfdateexpired()%></li>
                                                             <li>Prezzo <%=ls.get(i).getPofpernotto().getOfprice()%></li>
                                                         </ul>
@@ -227,7 +231,7 @@
                                                             Offerta Trasporto <%=ls.get(i).getPoftrasporto().getOfname()%>
                                                         </span>
                                                         <ul>
-                                                            <li><img src="http://orig15.deviantart.net/1614/f/2010/217/e/0/biffy_clyro_i_by_henrikack.jpg" style="margin-top: 10px; width: 100px; height: 70px;"></li>
+                                                            <li><img src="<%=Avatars.Trasporto.getPath()%>" style="margin-top: 10px; width: 100px; height: 70px;"></li>
                                                             <li>Data scadenza <%=ls.get(i).getPoftrasporto().getOfdateexpired()%></li>
                                                             <li>Prezzo <%=ls.get(i).getPoftrasporto().getOfprice()%></li>
                                                         </ul>
@@ -241,7 +245,7 @@
                                                             Offerta Evento <%=ls.get(i).getPofevento().get(j).getOfname()%>
                                                         </span>
                                                         <ul>
-                                                            <li><img src="http://orig15.deviantart.net/1614/f/2010/217/e/0/biffy_clyro_i_by_henrikack.jpg" style="margin-top: 10px; width: 100px; height: 70px;"></li>
+                                                            <li><img src="<%=Avatars.Evento.getPath()%>" style="margin-top: 10px; width: 100px; height: 70px;"></li>
                                                             <li>Data scadenza <%=ls.get(i).getPofevento().get(j).getOfdateexpired()%></li>
                                                             <li>Prezzo <%=ls.get(i).getPofevento().get(j).getOfprice()%></li>
                                                         </ul>

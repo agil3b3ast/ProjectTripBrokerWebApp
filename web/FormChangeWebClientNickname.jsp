@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="utenteBean" scope="session"
-             class="newpackage.UtenteBean"/>
+             class="newpackage.Beans.UtenteBean"/>
 <jsp:setProperty name="utenteBean" property="*"/>
 
 <script>
@@ -29,24 +29,6 @@
                 <tr>
                     <td width="80%">
                         <div class="card-panel blue-grey white-text">Nickname <%=utenteBean.getNickname()%></div>
-                    </td>
-                    <td width="20%">
-                        <button class="btn-flat waves-effect waves-light" id="changeNickname" onclick="Change();">Modifica</button>
-                    </td>
-                </tr>
-            </table>
-        </li>
-        <li>
-            <table style="display:none" id="tableModNickname">
-                <tr>
-                    <td width="80%">
-                        <div class="input-field col s12">
-                            <input placeholder="mynickname" id="modNickname" name="modNickname" type="text" class="validate">
-                            <label for="modNickname">Nuovo Nickname</label>
-                        </div>
-                    </td>
-                    <td width="20%">
-                        <button class="btn-flat waves-effect waves-light" id="confirmModNickname" type = "submit" name="confirmModNickname">Conferma Modifica</button>
                     </td>
                 </tr>
             </table>

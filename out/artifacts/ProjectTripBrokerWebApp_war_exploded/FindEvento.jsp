@@ -1,4 +1,4 @@
-<%@ page import="newpackage.OffertaBean" %>
+<%@ page import="newpackage.Beans.OffertaBean" %>
 <%@ page import="java.util.ArrayList "%>
 
 
@@ -14,13 +14,14 @@
 
 <!-- Si dichiara la variabile offertaBean e istanzia un oggetto newpackage.offertaBean -->
 <jsp:useBean id="findeventoBean" scope="request"
-             class="newpackage.OffertaEventoBean"/>
+             class="newpackage.Beans.OffertaEventoBean"/>
 
 <!--  Setta automaticamente tutti gli attributi dell'oggetto offertaBean -->
 <jsp:setProperty name="findeventoBean" property="*"/>
 
-<jsp:useBean id="utenteBean" class="newpackage.UtenteBean" scope="session"/>
+<jsp:useBean id="utenteBean" class="newpackage.Beans.UtenteBean" scope="session"/>
 <jsp:setProperty name="utenteBean" property="*"/>
+
 
 <%
     /*
@@ -68,6 +69,7 @@
                     </td>
                     <td width="20%"></td>
                     <td width="50%">
+                        <%request.setAttribute("findeventoBean",findeventoBean);%>
                         <jsp:include page="OffertaEventoReponse.jsp"/>
                     </td>
                 </tr>

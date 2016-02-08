@@ -1,4 +1,4 @@
-<%@ page import="newpackage.TipoOffertaPernotto" %><%--
+<%@ page import="newpackage.Enumerations.TipoOffertaPernotto" %><%--
   Created by IntelliJ IDEA.
   User: Alessandro
   Date: 08/01/2016

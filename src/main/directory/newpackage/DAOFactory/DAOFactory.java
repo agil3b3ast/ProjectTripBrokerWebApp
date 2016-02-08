@@ -1,7 +1,7 @@
 package newpackage.DAOFactory;
 
 import newpackage.DAO.*;
-import newpackage.TipoOfferta;
+import newpackage.Enumerations.TipoOfferta;
 
 /**
  * Created by Simone on 23/12/2015.

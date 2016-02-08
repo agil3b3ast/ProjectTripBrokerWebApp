@@ -6,32 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ page import="newpackage.TipoOffertaTrasporto" %>
+<%@ page import="newpackage.Enumerations.TipoOffertaTrasporto" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
-
-<script>
-    function Toggle() {
-        if(document.getElementById("check1").checked) {
-            document.getElementById("datepick").style.display = "block"
-            document.getElementById("selectdate").style.display = "none"
-        }
-        else{
-            document.getElementById("datepick").style.display = "none"
-            document.getElementById("selectdate").style.display = "block"
-        }
-    }
-</script>
-<script>
-    function Toggle2() {
-        if(document.getElementById("check2").checked) {
-            document.getElementById("favourite_city_to").style.display = "none"
-        }
-        else{
-            document.getElementById("favourite_city_to").style.display = "block"
-        }
-    }
-</script>
 
 <div class="row">
     <form class="col s12" name="frm" method="post" action="FindTrasporto.jsp">
@@ -47,12 +24,6 @@
             <li>
                 <!-- Switch -->
                 <div class="switch">
-                    <label>
-                        Andata e ritorno
-                        <input type="checkbox" id="check2" onclick="Toggle2();" checked ="checked">
-                        <span class="lever"></span>
-                        Solo andata
-                    </label>
                 </div>
             </li>
             <li>
@@ -61,7 +32,7 @@
                         <input placeholder="es. Roma" type="text" class="validate" name="cityFrom">
                         <label for="first_name">Città Partenza</label>
                     </div>
-                    <div class="input-field col s12" style="display: none" id="favourite_city_to" name="ofcity">
+                    <div class="input-field col s12" id="favourite_city_to" name="ofcity">
                         <input placeholder="es. Dublino" type="text" class="validate">
                         <label for="first_name">Città Arrivo</label>
                     </div>
@@ -91,30 +62,9 @@
                 </div>
             </li>
             <li>
-                <!-- Switch -->
-                <div class="switch">
-                    <label>
-                        Intervallo
-                        <input type="checkbox" id="check1" onclick="Toggle();" checked ="checked">
-                        <span class="lever"></span>
-                        Giorno specifico
-                    </label>
-                </div>
-            </li>
-            <li>
                 <div class="input-field col s12" style="display: block" id="datepick">
                     <input type="date" class="datepicker" name="ofdateexpired">
                     <label>Seleziona giorno specifico</label>
-                </div>
-
-                <div class="input-field col s12" style="display: none" id="selectdate">
-                    <select name="ofdateexpired">
-                        <option value="" disabled selected>Opzione</option>
-                        <option value="1">Minore di un mese</option>
-                        <option value="2">Tra un mese e 5 mesi</option>
-                        <option value="3">Oltre 5 mesi</option>
-                    </select>
-                    <label>Seleziona il periodo di scadenza</label>
                 </div>
             </li>
             <li>
@@ -128,7 +78,6 @@
                             <option value="" disabled selected>Opzione</option>
                             <option value="1">Minuti</option>
                             <option value="2">Ore</option>
-                            <option value="3">Giorni</option>
                         </select>
                     </div>
                 </div>

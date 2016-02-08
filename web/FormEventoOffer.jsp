@@ -1,4 +1,4 @@
-<%@ page import="newpackage.TipoOffertaEvento" %>
+<%@ page import="newpackage.Enumerations.TipoOffertaEvento" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <%--
@@ -9,7 +9,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<!--
 <html>
     <head>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,20 +18,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 
-        <script type="text/javascript">
-            function Toggle() {
-                if(document.getElementById("check1").checked) {
-                    document.getElementById("datepick").style.display = "block"
-                    document.getElementById("selectdate").style.display = "none"
-                }
-                else{
-                    document.getElementById("datepick").style.display = "none"
-                    document.getElementById("selectdate").style.display = "block"
-                }
-            }
-        </script>
-    </head>
-    <body>-->
 <div class="row">
     <form class="col s12" name="frm" method="post" action="FindEvento.jsp">
         <ul>
@@ -48,7 +33,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <input placeholder="es. Roma" id="ofcity" name="ofcity" type="text" class="validate">
-                        <label for="ofcity">Nome Offerta</label>
+                        <label for="ofcity">Citta preferita</label>
                     </div>
                 </div>
             </li>
@@ -77,31 +62,9 @@
                 </div>
             </li>
             <li>
-                <!-- Switch -->
-                <div class="switch">
-                    <label>
-                        Intervallo
-                        <input type="checkbox" id="check1" onclick="Toggle();" checked ="checked">
-                        <span class="lever"></span>
-                        Giorno specifico
-                    </label>
-                </div>
-            </li>
-            <li>
-                <div class="input-field col s12" style="display: block" id="datepick">
+                <div class="input-field col s12" id="datepick">
                     <input type="date" class="datepicker" name="ofdateexpired">
                     <label>Seleziona giorno specifico</label>
-                </div>
-            </li>
-            <li>
-                <div class="input-field col s12" style="display: none" id="selectdate">
-                    <select name="ofdatexpired">
-                        <option value="" disabled selected>Opzione</option>
-                        <option value="1">Minore di un mese</option>
-                        <option value="2">Tra un mese e 5 mesi</option>
-                        <option value="3">Oltre 5 mesi</option>
-                    </select>
-                    <label>Seleziona il periodo di scadenza</label>
                 </div>
             </li>
             <li>

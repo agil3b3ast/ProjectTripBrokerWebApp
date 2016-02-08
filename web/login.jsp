@@ -3,7 +3,7 @@
 
 <!-- Si dichiara la variabile utenteBean e istanzia un oggetto newpackage.utenteBean -->
 <jsp:useBean id="utenteBean" scope="session"
-             class="newpackage.UtenteBean" />
+             class="newpackage.Beans.UtenteBean" />
 
 <!--  Setta automaticamente tutti gli attributi dell'oggetto utenteBean -->
 <jsp:setProperty name="utenteBean" property="*" />

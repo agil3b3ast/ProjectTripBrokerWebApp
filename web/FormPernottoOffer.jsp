@@ -5,22 +5,9 @@
   Time: 17.51
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="newpackage.TipoOffertaPernotto" %>
+<%@ page import="newpackage.Enumerations.TipoOffertaPernotto" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
-
-<script type="text/javascript">
-    function Toggle() {
-        if(document.getElementById("check1").checked) {
-            document.getElementById("datepick").style.display = "block"
-            document.getElementById("selectdate").style.display = "none"
-        }
-        else{
-            document.getElementById("datepick").style.display = "none"
-            document.getElementById("selectdate").style.display = "block"
-        }
-    }
-</script>
 
 <div class="row">
     <form class="col s12" name="frm" method="post" action="FindPernotto.jsp">
@@ -65,30 +52,9 @@
                 </div>
             </li>
             <li>
-                <!-- Switch -->
-                <div class="switch">
-                    <label>
-                        Intervallo
-                        <input type="checkbox" id="check1" onclick="Toggle();" checked ="checked">
-                        <span class="lever"></span>
-                        Giorno specifico
-                    </label>
-                </div>
-            </li>
-            <li>
                 <div class="input-field col s12" style="display: block" id="datepick">
                     <input type="date" class="datepicker" name="ofdateexpired">
                     <label>Seleziona giorno specifico</label>
-                </div>
-
-                <div class="input-field col s12" style="display: none" id="selectdate">
-                    <select name="ofdatexpired">
-                        <option value="" disabled selected>Opzione</option>
-                        <option value="1">Minore di un mese</option>
-                        <option value="2">Tra un mese e 5 mesi</option>
-                        <option value="3">Oltre 5 mesi</option>
-                    </select>
-                    <label>Seleziona il periodo di scadenza</label>
                 </div>
             </li>
             <li>

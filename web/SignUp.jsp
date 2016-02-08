@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="utenteBean" scope="session"
-             class="newpackage.UtenteBean"/>
+             class="newpackage.Beans.UtenteBean"/>
 <jsp:setProperty name="utenteBean" property="*"/>
 
 <%

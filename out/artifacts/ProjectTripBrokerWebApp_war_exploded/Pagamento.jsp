@@ -1,20 +1,20 @@
-<%@ page import="newpackage.OffertaEventoBean" %>
-<%@ page import="newpackage.OffertaPernottoBean" %>
-<%@ page import="newpackage.OffertaTrasportoBean" %>
-<%@ page import="newpackage.PacchettoBean" %>
+<%@ page import="newpackage.Beans.OffertaEventoBean" %>
+<%@ page import="newpackage.Beans.OffertaPernottoBean" %>
+<%@ page import="newpackage.Beans.OffertaTrasportoBean" %>
+<%@ page import="newpackage.Beans.PacchettoBean" %>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 
-<!-- Si dichiara la variabile offertaBean e istanzia un oggetto newpackage.OffertaBean -->
+<!-- Si dichiara la variabile offertaBean e istanzia un oggetto newpackage.Beans.OffertaBean -->
 <jsp:useBean id="carrelloBean" scope="session"
-             type="newpackage.CarrelloBean" />
+             class="newpackage.Beans.CarrelloBean" />
 
 <jsp:setProperty name="carrelloBean" property="*"/>
 
-<!-- Si dichiara la variabile utenteBean e istanzia un oggetto newpackage.UtenteBean -->
+<!-- Si dichiara la variabile utenteBean e istanzia un oggetto newpackage.Beans.UtenteBean -->
 <jsp:useBean id="utenteBean" scope="session"
-             class="newpackage.UtenteBean" />
+             class="newpackage.Beans.UtenteBean" />
 
 <!--  Setta automaticamente tutti gli attributi dell'oggetto utenteBean -->
 <jsp:setProperty name="utenteBean" property="*" />
@@ -32,7 +32,7 @@
     <div class="row">
         <div class="card blue-grey">
             <div class="card-content white-text">
-                <span class="card-title">Pagamento non riuscito per le seguenti offerte e/o pacchetti</span>
+                <span class="card-title">Pagamento non riuscito</span>
             </div>
         </div>
         <form action="Catalogo.jsp" name="myform8" method="post">
@@ -45,12 +45,6 @@
     <%}}}
 %>
 <%
-    if(request.getParameter("offertrasportoitem")!=null){
-    if(request.getParameter("offertrasportoitem").equals("")){
-    System.out.println("RequestGetParameter");}
-    if(!request.getParameter("offertrasportoitem").equals("")){
-        System.out.println("RequesteGetPArameterNotNull");}
-    }
     if(request.getParameter("confirmRemovePack") != null || request.getParameter("confirmRemoveEve") != null || request.getParameter("confirmRemoveTras") != null || request.getParameter("confirmRemovePer") != null){
         System.out.println("Rimuovo item");
     //if(!(carrelloBean.getPacketitem().equals("")) || !(carrelloBean.getOffereventoitem().equals("")) || !(carrelloBean.getOfferpernottoitem().equals("")) || !(carrelloBean.getOffertrasportoitem().equals(""))){

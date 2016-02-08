@@ -8,12 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- Si dichiara la variabile offertaBean e istanzia un oggetto newpackage.offertaBean -->
 <jsp:useBean id="findtrasportoBean" scope="request"
-             class="newpackage.OffertaTrasportoBean"/>
+             class="newpackage.Beans.OffertaTrasportoBean"/>
 
 <!--  Setta automaticamente tutti gli attributi dell'oggetto offertaBean -->
 <jsp:setProperty name="findtrasportoBean" property="*"/>
 
-<jsp:useBean id="utenteBean" class="newpackage.UtenteBean" scope="session"/>
+<jsp:useBean id="utenteBean" class="newpackage.Beans.UtenteBean" scope="session"/>
 <jsp:setProperty name="utenteBean" property="*"/>
 
 <%
@@ -45,6 +45,7 @@
                 </td>
                 <td width="20%"></td>
                 <td width="50%">
+                    <%request.setAttribute("findtrasportoBean",findtrasportoBean);%>
                     <jsp:include page="OffertaTrasportoResponse.jsp"/>
                 </td>
             </tr>

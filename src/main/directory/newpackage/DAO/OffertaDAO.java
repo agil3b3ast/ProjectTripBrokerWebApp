@@ -3,11 +3,11 @@ package newpackage.DAO;
 import newpackage.DBResourcesManager;
 import newpackage.EntityPackage.Offerta;
 import newpackage.EntityPackage.OffertaEvento;
-import newpackage.TipoOfferta;
+import newpackage.EntityPackage.OffertaPernotto;
+import newpackage.EntityPackage.OffertaTrasporto;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.bytecode.buildtime.spi.ClassDescriptor;
 
 import java.util.List;
 
@@ -48,6 +48,32 @@ public abstract class OffertaDAO {
 
             if(res instanceof OffertaEvento) {
                 OffertaEvento p = (OffertaEvento) res;
+
+                if (!p.isToBuy()) {
+                    s.close();
+                    return false;
+                }
+                p.setToBuy(false);
+                s.update(p);
+                tx.commit();
+                s.close();
+                return true;
+            }
+            else if(res instanceof OffertaPernotto) {
+                OffertaPernotto p = (OffertaPernotto) res;
+
+                if (!p.isToBuy()) {
+                    s.close();
+                    return false;
+                }
+                p.setToBuy(false);
+                s.update(p);
+                tx.commit();
+                s.close();
+                return true;
+            }
+            else if(res instanceof OffertaTrasporto) {
+                OffertaTrasporto p = (OffertaTrasporto) res;
 
                 if (!p.isToBuy()) {
                     s.close();

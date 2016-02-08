@@ -6,20 +6,38 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="newpackage.OffertaBean" %>
-<%@ page import="newpackage.TipoOffertaTrasporto" %>
+<%@ page import="newpackage.Beans.OffertaBean" %>
+<%@ page import="newpackage.Enumerations.TipoOffertaTrasporto" %>
+<%@ page import="newpackage.Beans.OffertaTrasportoBean" %>
+<%@ page import="newpackage.Enumerations.Avatars" %>
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 
 <!-- Si dichiara la variabile offertaBean e istanzia un oggetto newpackage.offertaBean -->
 <jsp:useBean id="offertaBean" scope="request"
-             class="newpackage.OffertaTrasportoBean" />
+             class="newpackage.Beans.OffertaTrasportoBean" />
 <!--  Setta automaticamente tutti gli attributi dell'oggetto offertaBean -->
 <jsp:setProperty name="offertaBean" property="*" />
 
-<jsp:useBean id="utenteBean" class="newpackage.UtenteBean" scope="session"/>
+<jsp:useBean id="utenteBean" class="newpackage.Beans.UtenteBean" scope="session"/>
 <jsp:setProperty name="utenteBean" property="*"/>
+
+
+<jsp:useBean id="carrelloBean" scope="session"
+             class="newpackage.Beans.CarrelloBean"/>
+<jsp:setProperty name="carrelloBean" property="*"/>
+
+<%
+    if(utenteBean.isLogged()){
+        if(request.getParameter("offertrasportoitem") !=null){
+            carrelloBean.setPacketitem("");
+            carrelloBean.setOfferpernottoitem("");
+            carrelloBean.setOffereventoitem("");
+            if(carrelloBean.addItem() || !carrelloBean.carrelloempty()) {%>
+<jsp:forward page="Pagamento.jsp"/>
+<%      }}
+}%>
 
 <%
     if (offertaBean.getOftype() != null) {
@@ -66,9 +84,18 @@
                         for(int i=0;i<ls.size();i++){%>
                 <li>
                     <div class="collapsible-header"><%=ls.get(i).getOfname()%></div>
-                    <div class="collapsible-body"><div class="row"><div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Jumaira_Beach_Hotel.jpg" style="margin-top: 10px; width: 180px; height: 150px;"></div><div class="col">
+                    <div class="collapsible-body"><div class="row"><div class="col"><img src="<%=Avatars.Trasporto.getPath()%>" style="margin-top: 10px; width: 180px; height: 150px;"></div><div class="col">
                         <p>Prezzo <%=ls.get(i).getOfprice()%><br>Data di scadenza <%=ls.get(i).getOfdateexpired()%></br></p>
                     </div></div></div>
+                    <%if(utenteBean.isLogged()){%>
+                    <div class="card-action">
+                        <form action="OffertaTrasporto.jsp" name="myform5" method="post">
+                            <input hidden value="<%=((OffertaTrasportoBean)ls.get(i)).getOfid()%>" name="offertrasportoitem" id="offertrasportoitem">
+                            <button class="btn-flat waves-effect waves-light" type="submit">Acquista/Aggiungi
+                            </button>
+                        </form>
+                    </div>
+                    <%}%>
                 </li>
                 <%}}else{%>
                 <li>
