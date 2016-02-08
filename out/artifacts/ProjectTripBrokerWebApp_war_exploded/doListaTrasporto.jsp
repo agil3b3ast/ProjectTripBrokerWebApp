@@ -1,4 +1,4 @@
-<%@ page import="newpackage.TipoOffertaTrasporto" %><%--
+<%@ page import="newpackage.Enumerations.TipoOffertaTrasporto" %><%--
   Created by IntelliJ IDEA.
   User: Alessandro
   Date: 08/01/2016

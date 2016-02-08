@@ -1,6 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="newpackage.TipoOfferta"%>
+<%@ page import="newpackage.Enumerations.TipoOfferta"%>
 
 <nav>
     <div class="nav-wrapper">

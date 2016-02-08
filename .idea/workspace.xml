@@ -2,135 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7263c3ab-f0be-4520-b699-b3b226f64a54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Enumerations/Avatars.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/Avatars.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/CarrelloController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/LoginBean.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/Servlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/Utente.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/Avatars.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/CarrelloBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/CarrelloController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAO/CarrelloDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAO/OffertaDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAO/OffertaEventoDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAO/OffertaPernottoDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAO/OffertaTrasportoDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAO/UtenteDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAO/WebClientDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAOFactory/DAOFactory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAOFactory/DAOFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAOFactory/OffertaEventoDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAOFactory/OffertaPernottoDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DAOFactory/OffertaTrasportoDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/DBResourcesManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/EntityPackage/Carrello.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/EntityPackage/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/EntityPackage/WebClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/LoginBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/LoginController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/MainTest$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/MainTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/OffertaBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/OffertaController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/OffertaEventoBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/OffertaPernottoBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/OffertaTrasportoBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/PacchettoBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/PacchettoController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/RegistrazioneController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/Servlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/TipoOffertaEvento.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/TipoOffertaPernotto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/TipoOffertaTrasporto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/Utente.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/UtenteBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/Paginariempita.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/music_artist.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/nirvana.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/temp.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/test.jsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/CarrelloBean.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Beans/CarrelloBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/GestioneCarrelloController.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Controllers/GestioneCarrelloController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/LoginController.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Controllers/LoginController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/MainTest.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/unusued/MainTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/OffertaBean.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Beans/OffertaBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/OffertaController.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Controllers/OffertaController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/OffertaEventoBean.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Beans/OffertaEventoBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/OffertaPernottoBean.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Beans/OffertaPernottoBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/OffertaTrasportoBean.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Beans/OffertaTrasportoBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/PacchettoBean.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Beans/PacchettoBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/PacchettoController.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Controllers/PacchettoController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/PagamentoController.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Controllers/PagamentoController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/RegistrazioneController.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Controllers/RegistrazioneController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/TipoOfferta.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Enumerations/TipoOfferta.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/TipoOffertaEvento.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Enumerations/TipoOffertaEvento.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/TipoOffertaPernotto.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Enumerations/TipoOffertaPernotto.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/TipoOffertaTrasporto.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Enumerations/TipoOffertaTrasporto.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/UtenteBean.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/Beans/UtenteBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/Avatars.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/Avatars.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAO/OffertaDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAO/OffertaDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAO/OffertaPernottoDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAO/OffertaPernottoDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAO/OffertaTrasportoDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAO/OffertaTrasportoDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaBean.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaController.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaEventoBean.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaEventoBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaPernottoBean.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaPernottoBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaTrasportoBean.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/OffertaTrasportoBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/PacchettoBean.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/PacchettoBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/PacchettoController.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/PacchettoController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/OffertaPernotto.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/evento.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/pernotto.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/random_points.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/trasporto.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/GestioneCarrelloController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/PagamentoController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newpackage/TipoOfferta.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAOFactory/DAOFactory$1.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAOFactory/DAOFactory$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAOFactory/DAOFactory.class" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WEB-INF/classes/newpackage/DAOFactory/DAOFactory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/Catalogo.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/Catalogo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FindEvento.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FindEvento.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FindPernotto.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FindPernotto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FindTrasporto.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FindTrasporto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormChangeWebClientBirthday.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormChangeWebClientBirthday.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormChangeWebClientName.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormChangeWebClientName.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormChangeWebClientNickname.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormChangeWebClientNickname.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormChangeWebClientSurname.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormChangeWebClientSurname.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormEventoOffer.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormEventoOffer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormPernottoOffer.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormPernottoOffer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormTrasportoOffer.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/FormTrasportoOffer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaEvento.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaEvento.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaEventoReponse.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaEventoReponse.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaPernotto.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaPernotto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaPernottoResponse.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaPernottoResponse.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaTrasporto.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaTrasporto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaTrasportoResponse.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/OffertaTrasportoResponse.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/Pagamento.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/Pagamento.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WebClientCredentials.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/WebClientCredentials.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/DAO/OffertaDAO.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/DAO/OffertaDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/directory/newpackage/DAOFactory/DAOFactory.java" afterPath="$PROJECT_DIR$/src/main/directory/newpackage/DAOFactory/DAOFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Catalogo.jsp" afterPath="$PROJECT_DIR$/web/Catalogo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FindEvento.jsp" afterPath="$PROJECT_DIR$/web/FindEvento.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FindPernotto.jsp" afterPath="$PROJECT_DIR$/web/FindPernotto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FindTrasporto.jsp" afterPath="$PROJECT_DIR$/web/FindTrasporto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FormChangeWebClientBirthday.jsp" afterPath="$PROJECT_DIR$/web/FormChangeWebClientBirthday.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FormChangeWebClientName.jsp" afterPath="$PROJECT_DIR$/web/FormChangeWebClientName.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FormChangeWebClientNickname.jsp" afterPath="$PROJECT_DIR$/web/FormChangeWebClientNickname.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FormChangeWebClientSurname.jsp" afterPath="$PROJECT_DIR$/web/FormChangeWebClientSurname.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FormEventoOffer.jsp" afterPath="$PROJECT_DIR$/web/FormEventoOffer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FormPernottoOffer.jsp" afterPath="$PROJECT_DIR$/web/FormPernottoOffer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FormTrasportoOffer.jsp" afterPath="$PROJECT_DIR$/web/FormTrasportoOffer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/GestioneUtente.jsp" afterPath="$PROJECT_DIR$/web/GestioneUtente.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OffertaEvento.jsp" afterPath="$PROJECT_DIR$/web/OffertaEvento.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OffertaEventoReponse.jsp" afterPath="$PROJECT_DIR$/web/OffertaEventoReponse.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OffertaPernotto.jsp" afterPath="$PROJECT_DIR$/web/OffertaPernotto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OffertaPernottoResponse.jsp" afterPath="$PROJECT_DIR$/web/OffertaPernottoResponse.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OffertaTrasporto.jsp" afterPath="$PROJECT_DIR$/web/OffertaTrasporto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OffertaTrasportoResponse.jsp" afterPath="$PROJECT_DIR$/web/OffertaTrasportoResponse.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Pagamento.jsp" afterPath="$PROJECT_DIR$/web/Pagamento.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/SignUp.jsp" afterPath="$PROJECT_DIR$/web/SignUp.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WebClientCredentials.jsp" afterPath="$PROJECT_DIR$/web/WebClientCredentials.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/doListaEventi.jsp" afterPath="$PROJECT_DIR$/web/doListaEventi.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/doListaPernotto.jsp" afterPath="$PROJECT_DIR$/web/doListaPernotto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/doListaTrasporto.jsp" afterPath="$PROJECT_DIR$/web/doListaTrasporto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/loggednavbar.jsp" afterPath="$PROJECT_DIR$/web/loggednavbar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login.jsp" afterPath="$PROJECT_DIR$/web/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/logout.jsp" afterPath="$PROJECT_DIR$/web/logout.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/navbar.jsp" afterPath="$PROJECT_DIR$/web/navbar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/GestioneUtente.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/GestioneUtente.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/SignUp.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/SignUp.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/doListaEventi.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/doListaEventi.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/doListaPernotto.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/doListaPernotto.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/doListaTrasporto.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/doListaTrasporto.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/loggednavbar.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/loggednavbar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/logout.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/logout.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/navbar.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProjectTripBrokerWebApp_war_exploded/navbar.jsp" />
     </list>
     <ignored path="ProjectTripBrokerWebApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -292,8 +183,8 @@
       <file leaf-file-name="Catalogo.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/Catalogo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73913044">
-              <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.3933162">
+              <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -504,6 +395,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ProjectTripBrokerWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTripBrokerWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTripBrokerWebApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1232,7 +1137,7 @@
       <workItem from="1454864550842" duration="281000" />
       <workItem from="1454864899331" duration="11000" />
       <workItem from="1454882358263" duration="4078000" />
-      <workItem from="1454921956017" duration="16170000" />
+      <workItem from="1454921956017" duration="16824000" />
     </task>
     <task id="LOCAL-00001" summary="Added Cart add/remove items">
       <created>1454763666619</created>
@@ -1258,7 +1163,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454864727834</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added new style">
+      <created>1454938309179</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1454938309179</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1270,15 +1181,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90288000" />
+    <option name="totallyTimeSpent" value="90942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35726497" sideWeight="0.4924357" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24273504" sideWeight="0.4924357" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43931624" sideWeight="0.5075643" order="0" side_tool="true" content_ui="tabs" />
@@ -1342,7 +1253,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Cart add/remove items" />
     <MESSAGE value="Added Payment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Payment" />
+    <MESSAGE value="Added new style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1778,8 +1690,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Catalogo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73913044">
-          <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.3933162">
+          <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
           <folding />
         </state>
       </provider>

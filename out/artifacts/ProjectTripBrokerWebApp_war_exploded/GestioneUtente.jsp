@@ -8,11 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 
 <jsp:useBean id="utenteBean" scope="session"
-             class="newpackage.UtenteBean"/>
+             class="newpackage.Beans.UtenteBean"/>
 <jsp:setProperty name="utenteBean" property="*"/>
 
 <jsp:useBean id="carrelloBean" scope="session"
-             class="newpackage.CarrelloBean"/>
+             class="newpackage.Beans.CarrelloBean"/>
 <jsp:setProperty name="carrelloBean" property="*"/>
 
 <%
