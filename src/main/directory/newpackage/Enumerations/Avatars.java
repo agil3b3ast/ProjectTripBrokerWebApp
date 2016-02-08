@@ -8,7 +8,7 @@ import newpackage.EntityPackage.OffertaEvento;
 public enum Avatars{
 
     WebClient("C:\\Users\\Alessandro\\Downloads\\Annotations, Hibernate e JPA\\MyFirstWebApp\\src\\main\\webapp\\biffyclyro.jpeg"),
-    Packet("random_points.jpg"),
+    Packet("packet.jpg"),
     Evento("evento.jpg"),
     Pernotto("pernotto.jpg"),
     Trasporto("trasporto.jpg");
