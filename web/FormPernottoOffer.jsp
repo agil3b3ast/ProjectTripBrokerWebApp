@@ -15,7 +15,7 @@
             <li>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input placeholder="es. Notte a Dublino" id="first_name" nome="ofname" type="text" class="validate">
+                        <input placeholder="es. Notte a Dublino" id="first_name" nome="ofname" type="text">
                         <label for="first_name">Nome Offerta</label>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
            <li>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input placeholder="es. Dublino" id="favourite_city" name="ofcity" type="text" class="validate">
+                        <input placeholder="es. Dublino" id="favourite_city" name="ofcity" type="text">
                         <label for="first_name">Città preferita</label>
                     </div>
                 </div>

@@ -10,9 +10,6 @@ import org.hibernate.service.ServiceRegistryBuilder;
 
 public class DBResourcesManager {
 
-    //private static Configuration configuration;
-    //private static ServiceRegistry serviceRegistry;
-    //private static SessionFactory sessionFactory;
     private static SessionFactory sessionFactory;
     private static ServiceRegistry serviceRegistry;
 
@@ -29,19 +26,6 @@ public class DBResourcesManager {
                     configuration.getProperties()). buildServiceRegistry();
             sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 
-            // load hibernate configuration
-            //configuration = new Configuration();
-            //configuration.configure();
-
-            // use JNDI to bind Hibernate configuration and datasource
-          /*  serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
-                    configuration.getProperties()).build();*/
-            //serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-            /*
-             * Retrieve the one session factory that will manage sessions,
-             * connections and transaction
-             */
-            //sessionFactory = configuration.buildSessionFactory(serviceRegistry);
         }
         catch (HibernateException e) {
             System.out.append("** Exception in SessionFactory **");

@@ -2,9 +2,6 @@ package newpackage.EntityPackage;
 
 import javax.persistence.*;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
 @Entity
 public class OffertaPernotto extends Offerta {
     private Integer numeroNotti;
@@ -20,15 +17,6 @@ public class OffertaPernotto extends Offerta {
     public Integer getPerID() {
         return perID;
     }
-
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    public Offerta getOfferta() {
-//        return offerta;
-//    }
-//
-//    public void setOfferta(Offerta offerta) {
-//        this.offerta = offerta;
-//    }
 
     public void setPerID(Integer id) {
         this.perID = id;

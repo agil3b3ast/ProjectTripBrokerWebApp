@@ -253,6 +253,7 @@
                                                             <li><img src="<%=Avatars.Evento.getPath()%>" style="margin-top: 10px; width: 100px; height: 70px;"></li>
                                                             <li>Data scadenza <%=ls.get(i).getPofevento().get(j).getOfdateexpired()%></li>
                                                             <li>Prezzo <%=ls.get(i).getPofevento().get(j).getOfprice()%></li>
+                                                            <li>Città <%=ls.get(i).getPofevento().get(j).getOfcity()%></li>
                                                         </ul>
                                                         <!--Card action-->
                                                     </div>

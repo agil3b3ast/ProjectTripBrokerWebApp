@@ -1,9 +1,5 @@
 package newpackage.Beans;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
-
 import newpackage.Controllers.OffertaController;
 import newpackage.DAOFactory.DAOFactory;
 import newpackage.DBResourcesManager;

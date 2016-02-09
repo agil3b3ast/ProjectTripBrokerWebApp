@@ -25,7 +25,7 @@ public class Carrello implements Serializable{
     private List<Pacchetto> hasPacket;
 
     @LazyCollection(LazyCollectionOption.FALSE)
-    @ManyToMany//(fetch = FetchType.EAGER)
+    @ManyToMany
     public List<Pacchetto> getHasPacket() {
         return hasPacket;
     }
@@ -37,7 +37,7 @@ public class Carrello implements Serializable{
     private List<OffertaEvento> hasEvent;
 
     @LazyCollection(LazyCollectionOption.FALSE)
-    @ManyToMany//(fetch = FetchType.EAGER)
+    @ManyToMany
     public List<OffertaEvento> getHasEvent() {
         return hasEvent;
     }
@@ -49,7 +49,7 @@ public class Carrello implements Serializable{
     private List<OffertaTrasporto> hasTras;
 
     @LazyCollection(LazyCollectionOption.FALSE)
-    @ManyToMany//(fetch = FetchType.EAGER)
+    @ManyToMany
     public List<OffertaTrasporto> getHasTras() {
         return hasTras;
     }
@@ -61,7 +61,7 @@ public class Carrello implements Serializable{
     private List<OffertaPernotto> hasPer;
 
     @LazyCollection(LazyCollectionOption.FALSE)
-    @ManyToMany//(fetch = FetchType.EAGER)
+    @ManyToMany
     public List<OffertaPernotto> getHasPer() {
         return hasPer;
     }

@@ -1,15 +1,12 @@
-package newpackage.EntityPackage;
+package newpackage.EntityPackage.unusued;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
 @Entity
 public class User {
-    /* any persistent entity has to have an ID */
+
     @Id
     private String usID;
 

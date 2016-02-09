@@ -1,9 +1,5 @@
 package newpackage.Beans;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
-
 import newpackage.Controllers.OffertaController;
 import newpackage.DAOFactory.DAOFactory;
 import newpackage.DBResourcesManager;
@@ -13,9 +9,6 @@ import newpackage.Enumerations.TipoOfferta;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Alessandro on 28/12/2015.
- */
 public class OffertaEventoBean extends OffertaBean{
     private String oftype;
     private int ofid;
@@ -30,38 +23,8 @@ public class OffertaEventoBean extends OffertaBean{
     public int getOfid(){return this.ofid;}
     public void setOfid(int newid){this.ofid = newid;}
 
-    /*
-    public boolean selectAll(){
-        if(this.oftype != ""){
-            this.oftype = "Concerto";
-        }
-
-        OffertaController controller = OffertaController.getInstance();
-
-        ArrayList<Offerta> offlist = controller.findAll("offertaevento",this.oftype);
-        OffertaBean offbean;
-        this.offerList = null;
-        if(offlist != null && offlist.size()>0) {
-
-            this.offerList = new ArrayList<OffertaBean>();
-            for (Offerta off : offlist) {
-
-                offbean = new OffertaBean();
-                offbean.setOfdateexpired(off.getOfdateexpired());
-                offbean.setOfname(off.getOfname());
-                offbean.setOftype(off.getOftype());
-                offbean.setOfprice(off.getOfprice());
-
-                this.offerList.add(offbean);
-
-            }
-        }
-        return this.offerList == null;
-    }*/
-    //@Override
     public boolean selectAll(){
         if(this.oftype == ""){
-            //this.oftype = "Concerto";
             return false;
         }
         DBResourcesManager.initHibernate();
@@ -76,9 +39,6 @@ public class OffertaEventoBean extends OffertaBean{
         }
 
 
-        //OffertaController controller = OffertaController.getInstance();
-
-        //List<OffertaEvento> offlist = (List<OffertaEvento>) controller.findAll(TipoOfferta.OffertaEvento,this.oftype);
         OffertaEventoBean offbean;
         this.offerList = null;
         if(offlist != null && offlist.size()>0) {

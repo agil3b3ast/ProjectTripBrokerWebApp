@@ -18,7 +18,7 @@
     <mapping class="newpackage.EntityPackage.OffertaTrasporto"/>
     <mapping class="newpackage.EntityPackage.OffertaEvento"/>
     <mapping class="newpackage.EntityPackage.Pacchetto"/>
-    <mapping class="newpackage.EntityPackage.User"/>
+    <mapping class="newpackage.EntityPackage.unusued.User"/>
     <mapping class="newpackage.EntityPackage.WebClient"/>
     <mapping class="newpackage.EntityPackage.Carrello"/>
 

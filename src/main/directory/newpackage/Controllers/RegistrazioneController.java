@@ -10,9 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
-/**
- * Created by Alessandro on 03/02/2016.
- */
 public class RegistrazioneController {
 
     private static RegistrazioneController instance;
@@ -26,9 +23,15 @@ public class RegistrazioneController {
     private RegistrazioneController() {
     }
 
-    public WebClient signUp(String nickname, String password, String name, String surname, String birthday){
-        if(nickname == null || password == null || name == null || surname == null){
+    public WebClient signUp(String nickname, String password, String name, String surname, String birthday,String card){
+        if(nickname.equals("") || password.equals("") || name.equals("") || surname.equals("") || card.equals("")){
             return null;
+        }
+
+        if(!card.equals("")){
+            if(card.length() < 8 || card.contains(" ")){
+                return null;
+            }
         }
 
         try{
@@ -53,8 +56,8 @@ public class RegistrazioneController {
 
             webclient.setHasCart(carrello);
             webclient.setDataIscrizione(new Date((new java.util.Date()).getTime()));
+            webclient.setCarta(card);
             DAOFactory.getWebClientDAO().store(webclient);
-            //DBResourcesManager.shutdown();
             return webclient;
         }
         catch (ParseException e){

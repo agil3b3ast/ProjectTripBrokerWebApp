@@ -13,10 +13,6 @@ import newpackage.Enumerations.TipoOfferta;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
-
 public class OffertaTrasportoBean extends OffertaBean{
     private String oftype;
     private int ofid;

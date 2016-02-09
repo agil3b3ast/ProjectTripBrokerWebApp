@@ -1,11 +1,10 @@
 package newpackage.DAOFactory;
 
 import newpackage.DAO.*;
+import newpackage.DAO.unusued.UtenteDAO;
 import newpackage.Enumerations.TipoOfferta;
 
-/**
- * Created by Simone on 23/12/2015.
- */
+
 public  abstract class DAOFactory {
 
     public static DAOFactory getDAOFactory(TipoOfferta tipo) {

@@ -12,7 +12,7 @@
             <li>
                 <div class="row">
                     <div class="input-field col s12 white-text">
-                        <input placeholder="mynickname" id="nickname" name="nickname" type="text" class="validate">
+                        <input placeholder="mynickname" id="nickname" name="nickname" type="text">
                         <label for="nickname">Nickname</label>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
             <li>
                 <div class="row">
                     <div class="input-field col s12 white-text">
-                        <input placeholder="mypassword" id="password" name="password" type="text" class="validate">
+                        <input placeholder="mypassword" id="password" name="password" type="text">
                         <label for="password">Password</label>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
             <li>
                 <div class="row">
                     <div class="input-field col s12 white-text">
-                        <input placeholder="es. mionome" id="name" name="name" type="text" class="validate">
+                        <input placeholder="es. mionome" id="name" name="name" type="text">
                         <label for="name">Nome</label>
                     </div>
                 </div>
@@ -36,8 +36,16 @@
             <li>
                 <div class="row">
                     <div class="input-field col s12 white-text">
-                        <input placeholder="es. cognome" id="surname" name="surname" type="text" class="validate">
+                        <input placeholder="es. cognome" id="surname" name="surname" type="text">
                         <label for="surname">Cognome</label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <div class="input-field col s12 white-text">
+                        <input placeholder="es. idcarta" id="card" name="card" type="text">
+                        <label for="surname">Carta</label>
                     </div>
                 </div>
             </li>

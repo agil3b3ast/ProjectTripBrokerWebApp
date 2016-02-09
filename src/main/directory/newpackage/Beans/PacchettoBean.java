@@ -11,9 +11,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
 public class PacchettoBean implements Serializable{
     private String pname;
     private int pprice;

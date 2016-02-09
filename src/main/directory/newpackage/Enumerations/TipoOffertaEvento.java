@@ -1,8 +1,5 @@
 package newpackage.Enumerations;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
 public enum TipoOffertaEvento {
     Museo("Museo"),
     Concerto("Concerto"),

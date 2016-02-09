@@ -9,9 +9,6 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-/**
- * Created by Alessandro on 04/02/2016.
- */
 public class CarrelloDAO {
 
     public void store(Carrello e) {

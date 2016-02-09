@@ -12,9 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Created by Simone on 16/12/2015.
- */
+
 public class OffertaEventoDAO extends OffertaDAO {
 
     @Override
@@ -22,9 +20,9 @@ public class OffertaEventoDAO extends OffertaDAO {
 
         Session s = DBResourcesManager.getSession();
 
-        String query = "from OffertaEvento offertaEvento where offertaEvento.toBuy = true";
+        String query = "from OffertaEvento offertaEvento where offertaEvento.toBuy = true order by offertaEvento.prezzo";
         @SuppressWarnings("unchecked")
-        List<OffertaEvento> offerte = s.createQuery(query).list();
+        List<OffertaEvento> offerte = s.createQuery(query).setMaxResults(10).list();
         if(offerte.size()>0){
             s.close();
             return offerte;
@@ -55,9 +53,9 @@ public class OffertaEventoDAO extends OffertaDAO {
     @Override
     public Object findtype(String type) {
         Session s = DBResourcesManager.getSession();
-        String query = "from OffertaEvento offertaEvento where offertaEvento.toBuy = true and offertaEvento.tipologia = '"+type+"'";
+        String query = "from OffertaEvento offertaEvento where offertaEvento.toBuy = true and offertaEvento.tipologia = '"+type+"' order by offertaEvento.prezzo";
         @SuppressWarnings("unchecked")
-        List<OffertaEvento> offerte = s.createQuery(query).list();
+        List<OffertaEvento> offerte = s.createQuery(query).setMaxResults(10).list();
         if(offerte.size()>0){
             s.close();
             return offerte;}
@@ -105,24 +103,13 @@ public class OffertaEventoDAO extends OffertaDAO {
             s.delete(offerta);
             tx.commit();
         }
-        /*
-        catch (EJBTransactionRolledbackException e) {
-            Throwable t = e.getCause();
-            while ((t != null) && !(t instanceof ConstraintViolationException)) {
-                t = t.getCause();
-            }
-            if (t instanceof ConstraintViolationException) {
-                System.out.println("Offerta non rimovibile, presente in un pacchetto");
-                throw e;
-            }
-        }*/
+
         catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             throw e;
         }
         finally {
             s.close();
-            //DBResourcesManager.shutdown();
         }
     }
 
@@ -131,39 +118,10 @@ public class OffertaEventoDAO extends OffertaDAO {
         Session s = DBResourcesManager.getSession();
         String initquery = "from OffertaEvento offertaEvento";
 
-        /*
-        String query = "from OffertaEvento offertaEvento";
-        if(città == null && dataScadenza == null && nome == null && prezzo == null && tipologia == null){
-            @SuppressWarnings("unchecked")
-            List<OffertaEvento> offerte = s.createQuery(query).list();
-            if(offerte.size()>0)
-                return offerte;
-            else
-                return null;
-        }
-        query = query + " where ";
-        if(città != null)
-            query = query + "offertaEvento.città = '"+città+"' && ";
-        if(dataScadenza != null)
-            query = query + "offertaEvento.dataScadenza = '" + dataScadenza + "' && ";
-        if(nome != null)
-            query = query + "offertaEvento.nome = '"+nome+"' && ";
-        if(prezzo != null)
-            query = query + "offertaEvento.prezzo = '"+prezzo+"' && ";
-        if(tipologia != null)
-            query = query + "offertaEvento.tipologia = '"+tipologia+"'";
 
-        @SuppressWarnings("unchecked")
-        List<OffertaEvento> offerte = s.createQuery(query).list();
-        if(offerte.size()>0)
-            return offerte;
-        else
-            return null;*/
-        //StringBuilder sb = new StringBuilder(14);
         List<String> strings = new LinkedList<String>();
 
         if (!ls.isEmpty()) {
-            //sb.append(initquery).append(" where");
             initquery = initquery + " where offertaEvento.toBuy = true and ";
         }
 
@@ -182,51 +140,25 @@ public class OffertaEventoDAO extends OffertaDAO {
                 catch(java.text.ParseException e){
                     System.out.println("Exception : ParseException");
                 }
-                //sb.append(" offertaEvento.dataScadenza = '").append(ls.get(i)).append("'");
             }
-            //sb.append(" offertaEvento.dataScadenza = '").append(ls.get(i)).append("'");
             if (!ls.get(i).equals("") && i == 2)
                 strings.add("offertaEvento.nome = '" + ls.get(i) + "'");
-                //sb.append(" offertaEvento.nome = '").append(ls.get(i)).append("'");
             if (!ls.get(i).equals("") && i == 3) {
                 if(ls.get(i).equals("1"))
                     strings.add("offertaEvento.prezzo < '100'");
-                    //sb.append(" offertaEvento.prezzo < '100'");
                 if(ls.get(i).equals("2"))
                     strings.add("offertaEvento.prezzo > '100' && offertaEvento.prezzo < '500'");
-                    //sb.append(" offertaEvento.prezzo > '100' && offertaEvento.prezzo < '500'");
                 if(ls.get(i).equals("3"))
                     strings.add("offertaEvento.prezzo > '500'");
-                //sb.append(" offertaEvento.prezzo > '500'");
             }
             if (!ls.get(i).equals("") && i == 4)
                 strings.add("offertaEvento.tipologia = '" + ls.get(i) + "'");
-            //sb.append(" offertaEvento.tipologia = '").append(ls.get(i)).append("'");
         }
 
         String joinedstring = String.join(" and ",strings);
-        System.out.println(initquery + joinedstring);
-        /*
-        if(!ls.isEmpty())
-            query.join(" where");
 
-        for(int i= 0; i<ls.size();i++){
-            if(!ls.get(i).equals("") && i == 0)
-                query.join(" && offertaEvento.città = '"+ls.get(i)+"'");
-            if(!ls.get(i).equals("") && i == 1)
-                query.join(" && offertaEvento.dataScadenza = '"+ls.get(i)+"'");
-            if(!ls.get(i).equals("") && i == 2)
-                query.join(" && offertaEvento.nome = '"+ls.get(i)+"'");
-            if(!ls.get(i).equals("") && i == 3)
-                query.join(" && offertaEvento.prezzo = '"+ls.get(i)+"'");
-            if(!ls.get(i).equals("") && i == 4)
-                query.join(" && offertaEvento.tipologia = '"+ls.get(i)+"'");
-        }*/
-
-        //System.out.println(sb.toString());
-        //return new Object();
         String query = initquery + joinedstring;
-        List<OffertaEvento> offerte = s.createQuery(query).list();
+        List<OffertaEvento> offerte = s.createQuery(query).setMaxResults(10).list();
         if(offerte.size()>0){
             s.close();
             return offerte;}

@@ -9,9 +9,6 @@ import org.hibernate.Transaction;
 import java.sql.Connection;
 import java.util.List;
 
-/**
- * Created by Simone on 22/12/2015.
- */
 public class PacchettoDAO {
 
     public void store(Pacchetto e) {
@@ -187,23 +184,13 @@ public class PacchettoDAO {
             s.delete(pacchetto);
             tx.commit();
         }
-        /*
-        catch (EJBTransactionRolledbackException e) {
-            Throwable t = e.getCause();
-            while ((t != null) && !(t instanceof ConstraintViolationException)) {
-                t = t.getCause();
-            }
-            if (t instanceof ConstraintViolationException) {
-                System.out.println("Offerta non rimovibile, presente in un pacchetto");
-            }
-        }*/
+
         catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             throw e;
         }
         finally {
             s.close();
-            //DBResourcesManager.shutdown();
         }
     }
 

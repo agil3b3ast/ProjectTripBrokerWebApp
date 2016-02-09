@@ -1,9 +1,6 @@
-package newpackage.DAO; /**
- * Created by Alessandro on 09/12/2015.
- */
-
+package newpackage.DAO.unusued;
 import newpackage.DBResourcesManager;
-import newpackage.EntityPackage.User;
+import newpackage.EntityPackage.unusued.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 

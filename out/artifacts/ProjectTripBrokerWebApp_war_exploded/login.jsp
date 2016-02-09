@@ -47,13 +47,13 @@
             <form name="myform" method="post" action="login.jsp" class="col s12">
                 <div class="row">
                     <div class="input-field col s12 black-text">
-                        <input placeholder="mynickname" id="nickname" name="nickname" type="text" class="validate">
+                        <input placeholder="mynickname" id="nickname" name="nickname" type="text">
                         <label for="nickname">Nickname</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12 black-text">
-                        <input placeholder="mypassword" id="password" name="password" type="text" class="validate">
+                        <input placeholder="mypassword" id="password" name="password" type="text">
                         <label for="password">Password</label>
                     </div>
                 </div>

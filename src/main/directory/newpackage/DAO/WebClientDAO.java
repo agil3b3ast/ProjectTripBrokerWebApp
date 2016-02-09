@@ -1,9 +1,5 @@
 package newpackage.DAO;
 
-/**
- * Created by Alessandro on 04/02/2016.
- */
-
 import newpackage.DBResourcesManager;
 import newpackage.EntityPackage.WebClient;
 import org.hibernate.HibernateException;
@@ -36,7 +32,6 @@ public class WebClientDAO {
     public List<WebClient> findSelectedUser(String nickname, String password) {
         Session s = DBResourcesManager.getSession();
 
-//        String query = "from User user where user.usID = '" + name + "' and user.password = '" + password + "'";
         String query = "from WebClient webclient where webclient.nickname = '" + nickname + "' and webclient.password = '" + password + "'";
         System.out.println(query);
         @SuppressWarnings("unchecked")

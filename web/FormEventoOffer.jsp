@@ -24,7 +24,7 @@
             <li>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input placeholder="es. Concerto a Roma" id="ofname" name="ofname" type="text" class="validate">
+                        <input placeholder="es. Concerto a Roma" id="ofname" name="ofname" type="text">
                         <label for="ofname">Nome Offerta</label>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
             <li>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input placeholder="es. Roma" id="ofcity" name="ofcity" type="text" class="validate">
+                        <input placeholder="es. Roma" id="ofcity" name="ofcity" type="text">
                         <label for="ofcity">Citta preferita</label>
                     </div>
                 </div>

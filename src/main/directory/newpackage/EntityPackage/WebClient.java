@@ -7,9 +7,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 
-/**
- * Created by Alessandro on 29/01/2016.
- */
 @Entity
 public class WebClient implements Serializable{
     @GeneratedValue
@@ -112,4 +109,14 @@ public class WebClient implements Serializable{
     }
 
 
+    @Basic
+    private String carta;
+
+    public String getCarta() {
+        return carta;
+    }
+
+    public void setCarta(String carta) {
+        this.carta = carta;
+    }
 }

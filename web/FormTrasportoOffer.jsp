@@ -16,7 +16,7 @@
             <li>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input placeholder="es. Treno per Milano" id="first_name" name="ofname" type="text" class="validate">
+                        <input placeholder="es. Treno per Milano" id="first_name" name="ofname" type="text">
                         <label for="first_name">Nome Offerta</label>
                     </div>
                 </div>
@@ -29,11 +29,11 @@
             <li>
                 <div class="row">
                     <div class="input-field col s12" id="favourite_city_from">
-                        <input placeholder="es. Roma" type="text" class="validate" name="cityFrom">
+                        <input placeholder="es. Roma" type="text" name="cityFrom">
                         <label for="first_name">Città Partenza</label>
                     </div>
                     <div class="input-field col s12" id="favourite_city_to" name="ofcity">
-                        <input placeholder="es. Dublino" type="text" class="validate">
+                        <input placeholder="es. Dublino" type="text">
                         <label for="first_name">Città Arrivo</label>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
             <li>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="es. 1" id="time_to" type="text" class="validate" name="duration">
+                        <input placeholder="es. 1" id="time_to" type="text" name="duration">
                         <label for="time_to">Durata Viaggio</label>
                     </div>
                     <div class="input-field col s6">

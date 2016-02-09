@@ -11,9 +11,7 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
+
 public abstract class OffertaDAO {
 
     public static void store(Offerta of) {

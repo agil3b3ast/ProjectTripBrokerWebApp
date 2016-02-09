@@ -4,13 +4,7 @@ import javax.persistence.Basic;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
 
-
-//@Entity
-//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @MappedSuperclass
 public class Offerta implements Serializable{
     private String ofID;
@@ -18,15 +12,6 @@ public class Offerta implements Serializable{
     private int prezzo;
     private java.sql.Date dataScadenza;
     private String città;
-
-//    @Id
-//    public String getOfID() {
-//        return ofID;
-//    }
-//
-//    public void setOfID(String id) {
-//        this.ofID = id;
-//    }
 
     public Offerta(){super();}
 

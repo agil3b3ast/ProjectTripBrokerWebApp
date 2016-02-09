@@ -2,9 +2,6 @@ package newpackage.EntityPackage;
 
 import javax.persistence.*;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
 @Entity
 public class OffertaTrasporto extends Offerta {
     private String cittàPartenza;
@@ -21,15 +18,6 @@ public class OffertaTrasporto extends Offerta {
     public Integer getTrasID() {
         return trasID;
     }
-
-//    @ManyToOne
-//    public Offerta getOfferta() {
-//        return offerta;
-//    }
-//
-//    public void setOfferta(Offerta offerta) {
-//        this.offerta = offerta;
-//    }
 
     public void setTrasID(Integer trasID) {
         this.trasID = trasID;

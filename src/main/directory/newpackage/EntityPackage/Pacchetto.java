@@ -10,9 +10,6 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by Alessandro on 08/01/2016.
- */
 @Entity
 public class Pacchetto implements Serializable{
     private Integer id;
@@ -50,9 +47,9 @@ public class Pacchetto implements Serializable{
     public void setOffertaTrasporto(OffertaTrasporto OffertaTrasportoEntity) {
         this.offertaTrasporto = OffertaTrasportoEntity;
     }
-    //FetchType.EAGER
+
     @LazyCollection(LazyCollectionOption.FALSE)
-    @ManyToMany//(fetch = FetchType.EAGER)
+    @ManyToMany
     public List<OffertaEvento> getOffertaEvento() {
         return offertaEvento;
     }

@@ -6,12 +6,10 @@ import newpackage.Controllers.RegistrazioneController;
 import newpackage.EntityPackage.Carrello;
 import newpackage.EntityPackage.WebClient;
 import newpackage.Enumerations.Avatars;
+import sun.security.util.Password;
 
 import java.io.Serializable;
 
-/**
- * Created by Alessandro on 29/01/2016.
- */
 public class UtenteBean implements Serializable{
     private String nickname;
     private String password;
@@ -23,6 +21,7 @@ public class UtenteBean implements Serializable{
     private String avatar;
     private CarrelloBean carrelloBean;
     private String signUpDate;
+    private String card;
 
     public UtenteBean(){
         this.nickname = "";
@@ -34,6 +33,16 @@ public class UtenteBean implements Serializable{
         this.carrelloBean = null;
         this.avatar = Avatars.WebClient.getPath();
         this.signUpDate = "";
+        this.card = "";
+    }
+
+
+    public String getCard() {
+        return card;
+    }
+
+    public void setCard(String card) {
+        this.card = card;
     }
 
     public CarrelloBean getCarrelloBean() {
@@ -117,12 +126,12 @@ public class UtenteBean implements Serializable{
     }
 
     public boolean signUp() {
-        if(this.nickname == null || this.password == null || this.name == null || this.surname == null){
+        if(this.nickname.equals("") || this.password.equals("") || this.name.equals("") || this.surname.equals("") || this.card.equals("")){
             return false;
         }
 
         RegistrazioneController registrazioneController = RegistrazioneController.getInstance();
-        WebClient webClient =  registrazioneController.signUp(this.nickname,this.password,this.name,this.surname,this.birthday);
+        WebClient webClient =  registrazioneController.signUp(this.nickname,this.password,this.name,this.surname,this.birthday,this.card);
         if(webClient == null){
             this.logged = false;
             return false;

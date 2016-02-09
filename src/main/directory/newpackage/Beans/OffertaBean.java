@@ -3,9 +3,6 @@ package newpackage.Beans;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created by Alessandro on 28/12/2015.
- */
 public class OffertaBean implements Serializable{
     protected String ofname;
     protected int ofprice;
@@ -29,58 +26,5 @@ public class OffertaBean implements Serializable{
     public void setOfdateexpired(String newofdateexpired){this.ofdateexpired = newofdateexpired;}
     public String getOfcity(){return this.ofcity;}
     public void setOfcity(String newcity){this.ofcity = newcity;}
-
-    /*
-    public boolean selectAll(){
-        if(this.oftype != ""){
-            this.oftype = "Concerto";
-        }
-
-        OffertaController controller = OffertaController.getInstance();
-
-        ArrayList<Offerta> offlist = controller.findAll("offertaevento",this.oftype);
-        OffertaBean offbean;
-        this.offerList = null;
-        if(offlist != null && offlist.size()>0) {
-
-            this.offerList = new ArrayList<OffertaBean>();
-            for (Offerta off : offlist) {
-
-                offbean = new OffertaBean();
-                offbean.setOfdateexpired(off.getOfdateexpired());
-                offbean.setOfname(off.getOfname());
-                offbean.setOftype(off.getOftype());
-                offbean.setOfprice(off.getOfprice());
-
-                this.offerList.add(offbean);
-
-            }
-        }
-        return this.offerList == null;
-    }*/
-    /*
-    public boolean selectAll(){
-
-        OffertaController controller = OffertaController.getInstance();
-
-        List<OffertaEvento> offlist = (List<OffertaEvento>) controller.findAll(TipoOfferta.OffertaEvento,null);
-        OffertaBean offbean;
-        this.offerList = null;
-        if(offlist != null && offlist.size()>0) {
-
-            this.offerList = new ArrayList<OffertaBean>();
-            for (OffertaEvento off : offlist) {
-
-                offbean = new OffertaBean();
-                offbean.setOfdateexpired(off.getDataScadenza().toString());
-                offbean.setOfname(off.getNome());
-                offbean.setOfprice((off.getPrezzo()));
-                offbean.setOfcity(off.getCittà());
-
-                this.offerList.add(offbean);
-            }
-        }
-        return this.offerList == null;
-    }*/
 
 }
